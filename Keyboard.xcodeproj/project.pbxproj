@@ -56,15 +56,47 @@
 		50D59932292402D800175731 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				50D59933292402D800175731 /* AppDelegate.swift */,
-				50D59935292402D800175731 /* SceneDelegate.swift */,
-				50D59937292402D800175731 /* ViewController.swift */,
-				50D59939292402D800175731 /* Main.storyboard */,
+				50D5994A2924043100175731 /* Models */,
+				50D599482924037200175731 /* ViewControllers */,
+				50D59949292403AB00175731 /* Storyboards */,
+				50D599472924036200175731 /* Delegates */,
 				50D5993C292402D900175731 /* Assets.xcassets */,
-				50D5993E292402D900175731 /* LaunchScreen.storyboard */,
 				50D59941292402D900175731 /* Info.plist */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		50D599472924036200175731 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				50D59933292402D800175731 /* AppDelegate.swift */,
+				50D59935292402D800175731 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		50D599482924037200175731 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				50D59937292402D800175731 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		50D59949292403AB00175731 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				50D59939292402D800175731 /* Main.storyboard */,
+				50D5993E292402D900175731 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		50D5994A2924043100175731 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
