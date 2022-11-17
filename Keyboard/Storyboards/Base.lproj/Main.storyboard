@@ -405,7 +405,6 @@
                         <outletCollection property="usCapsCollection" destination="jXI-c1-zNX" collectionClass="NSMutableArray" id="d6D-7P-mJI"/>
                         <outletCollection property="usCapsCollection" destination="HxX-Q7-OWC" collectionClass="NSMutableArray" id="Rxc-v3-Isy"/>
                         <outletCollection property="usCapsCollection" destination="Ihz-hl-02X" collectionClass="NSMutableArray" id="yKK-MF-wrq"/>
-                        <outletCollection property="usCapsCollection" destination="uR5-Hc-Aup" collectionClass="NSMutableArray" id="ATM-CX-e9a"/>
                         <outletCollection property="usCapsCollection" destination="N2W-g2-Dg5" collectionClass="NSMutableArray" id="Mp8-EP-nBJ"/>
                         <outletCollection property="usCapsCollection" destination="IVS-63-Ypk" collectionClass="NSMutableArray" id="7cl-gr-jwW"/>
                         <outletCollection property="usCapsCollection" destination="0nK-3U-9nN" collectionClass="NSMutableArray" id="T3o-nH-hiW"/>
@@ -413,14 +412,12 @@
                         <outletCollection property="usCapsCollection" destination="Oyf-b3-j1g" collectionClass="NSMutableArray" id="xhw-cb-0a6"/>
                         <outletCollection property="usCapsCollection" destination="gkv-BW-ivV" collectionClass="NSMutableArray" id="EZ2-Lh-Vgq"/>
                         <outletCollection property="usCapsCollection" destination="KLx-Jm-pMb" collectionClass="NSMutableArray" id="6la-LY-3DI"/>
-                        <outletCollection property="usCapsCollection" destination="c0V-yd-Sa6" collectionClass="NSMutableArray" id="IMs-T8-7SX"/>
-                        <outletCollection property="usCapsCollection" destination="YPh-rh-RpW" collectionClass="NSMutableArray" id="jmK-Hq-Uqd"/>
-                        <outletCollection property="usCapsCollection" destination="rIB-aV-FeY" collectionClass="NSMutableArray" id="6hc-1A-o8p"/>
-                        <outletCollection property="usCapsCollection" destination="5jB-yT-v63" collectionClass="NSMutableArray" id="e4a-EJ-2hw"/>
-                        <outletCollection property="usCapsCollection" destination="Lop-hn-sNQ" collectionClass="NSMutableArray" id="0xW-qr-Ed9"/>
-                        <outletCollection property="iconsCollection" destination="uR5-Hc-Aup" collectionClass="NSMutableArray" id="g4b-Gu-4LF"/>
-                        <outletCollection property="iconsCollection" destination="c0V-yd-Sa6" collectionClass="NSMutableArray" id="lbG-IU-jgn"/>
-                        <outletCollection property="iconsCollection" destination="rIB-aV-FeY" collectionClass="NSMutableArray" id="Iku-Fr-Fq1"/>
+                        <outletCollection property="iconsCollection" destination="uR5-Hc-Aup" collectionClass="NSMutableArray" id="fhZ-NQ-8zS"/>
+                        <outletCollection property="iconsCollection" destination="c0V-yd-Sa6" collectionClass="NSMutableArray" id="WGD-Fh-eG0"/>
+                        <outletCollection property="iconsCollection" destination="YPh-rh-RpW" collectionClass="NSMutableArray" id="ghJ-0d-nhq"/>
+                        <outletCollection property="iconsCollection" destination="rIB-aV-FeY" collectionClass="NSMutableArray" id="h4r-V0-RAy"/>
+                        <outletCollection property="iconsCollection" destination="5jB-yT-v63" collectionClass="NSMutableArray" id="PAP-Cv-d31"/>
+                        <outletCollection property="iconsCollection" destination="Lop-hn-sNQ" collectionClass="NSMutableArray" id="RqH-Q1-AVk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
