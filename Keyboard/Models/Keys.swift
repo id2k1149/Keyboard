@@ -5,8 +5,9 @@
 //  Created by Max Franz Immelmann on 11/17/22.
 //
 
-struct USKeys {
+struct Keys {
     let usKeys: [Character] = DataStore.getKeysForUSLayout()
+    let numbersKeys: [Character] = DataStore.getKeysForNumberLayout()
     
     
 }

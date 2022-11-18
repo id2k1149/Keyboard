@@ -16,7 +16,7 @@ class USViewController: UIViewController {
     @IBOutlet var usKeysCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
-    let keys: [Character] = USKeys().usKeys
+    let keys: [Character] = Keys().usKeys
     
     override func viewDidLoad() {
         super.viewDidLoad()
