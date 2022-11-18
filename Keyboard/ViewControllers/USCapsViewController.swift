@@ -15,7 +15,6 @@ class USCapsViewController: UIViewController {
     @IBOutlet var usCapsCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
-    
     let keys: [Character] = USKeys().usKeys
     
     override func viewDidLoad() {
@@ -24,15 +23,9 @@ class USCapsViewController: UIViewController {
         textField.layer.cornerRadius = 10
         keyboard.layer.cornerRadius = 10
         
-        
-//        keys.forEach {
-//            let index = keys.firstIndex(of: $0)
-//        }
-        
         usCapsCollection.forEach {
             $0.layer.cornerRadius = 5
             guard let keyIndex = usCapsCollection.firstIndex(of: $0) else {return}
-           
             $0.setTitle(String(keys[keyIndex]).uppercased(), for: .normal)
         }
         
@@ -43,7 +36,6 @@ class USCapsViewController: UIViewController {
         
     }
     
-    
     @IBAction func keyButtonTaped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
@@ -53,6 +45,10 @@ class USCapsViewController: UIViewController {
         textField.text += " "
     }
     
+    @IBAction func deleteButtonTapped() {
+        textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
+        print(textField.text ?? "N/A")
+    }
     
 }
 

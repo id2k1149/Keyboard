@@ -381,6 +381,9 @@
                                                                 <state key="normal" image="delete.backward" catalog="system">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="deleteButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="7hn-Gt-j9y"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
