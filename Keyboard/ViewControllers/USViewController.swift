@@ -43,10 +43,12 @@ class USViewController: UIViewController {
     @IBAction func keyButtonTaped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
+        
         usKeysCollection.forEach {
             guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
             $0.setTitle(String(keys[keyIndex]), for: .normal)
         }
+        
         guard let shiftImage = UIImage(systemName: "shift") else {return}
         shiftButton.setImage(
             shiftImage,

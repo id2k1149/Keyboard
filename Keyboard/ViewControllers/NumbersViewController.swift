@@ -38,4 +38,20 @@ class NumbersViewController: UIViewController {
             $0.tintColor = .black
         }
     }
+    
+    @IBAction func keyButtonTapped(_ sender: UIButton) {
+        guard let buttonTitle = sender.currentTitle else {return}
+        textField.text += buttonTitle
+        
+        
+        numbersCollection.forEach {
+            guard let keyIndex = numbersCollection.firstIndex(of: $0) else {return}
+            $0.setTitle(String(numbers[keyIndex]), for: .normal)
+        }
+    }
+    
+    
+    
+    
+    
 }

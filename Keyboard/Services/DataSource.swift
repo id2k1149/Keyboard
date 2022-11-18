@@ -6,7 +6,7 @@
 //
 
 struct DataStore {
-    let layoutUS: [Character]
+    let layout: [Character]
     
 }
 
