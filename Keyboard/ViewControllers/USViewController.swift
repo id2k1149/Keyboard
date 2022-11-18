@@ -64,22 +64,31 @@ class USViewController: UIViewController {
     
     
     @IBAction func shiftButtonTapped() {
+        guard let currentShiftImage = shiftButton.currentImage else {return}
+        guard let shiftFillImage = UIImage(systemName: "shift.fill") else {return}
         
-        
-        usKeysCollection.forEach {
-            guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
-            $0.setTitle(
-                String(keys[keyIndex]).uppercased(),
-                        for: .normal)
+        switch currentShiftImage.isEqual(shiftFillImage) {
+        case true:
+            guard let shiftImage = UIImage(systemName: "shift") else {return}
+            shiftButton.setImage(shiftImage, for: .normal)
+            usKeysCollection.forEach {
+                guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
+                $0.setTitle(
+                    String(keys[keyIndex]),
+                    for: .normal)
+            }
+            
+        case false:
+            guard let shiftImage = UIImage(systemName: "shift.fill") else {return}
+            shiftButton.setImage(shiftImage, for: .normal)
+            usKeysCollection.forEach {
+                guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
+                $0.setTitle(
+                    String(keys[keyIndex]).uppercased(),
+                    for: .normal)
+            }
         }
-        
-        guard let shiftImage = UIImage(systemName: "shift") else {return}
-        shiftButton.setImage(
-            shiftImage,
-            for: .normal)
-        
     }
-    
 }
 
 // MARK: - extension
@@ -87,4 +96,7 @@ extension USViewController {
     private func drawLayout() {
         
     }
+    
 }
+    
+    
