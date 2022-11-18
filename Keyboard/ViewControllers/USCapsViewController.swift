@@ -9,13 +9,13 @@ import UIKit
 
 class USCapsViewController: UIViewController {
 
-    @IBOutlet var textField: UIView!
+    @IBOutlet var textField: UITextView!
     @IBOutlet var keyboard: UIView!
     
     @IBOutlet var usCapsCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
-    let keys: [Character] = DataStore.getKeysForCapsUS()
+    let keys: [Character] = USKeys().usKeys
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,26 +23,36 @@ class USCapsViewController: UIViewController {
         textField.layer.cornerRadius = 10
         keyboard.layer.cornerRadius = 10
         
-        keys.forEach {
-            print($0)
-            let index = keys.firstIndex(of: $0)
-            print(index as Any)
-        }
+        
+//        keys.forEach {
+//            let index = keys.firstIndex(of: $0)
+//        }
         
         usCapsCollection.forEach {
             $0.layer.cornerRadius = 5
             guard let keyIndex = usCapsCollection.firstIndex(of: $0) else {return}
            
-            $0.setTitle(String(keys[keyIndex]), for: .normal)
-            
-            
+            $0.setTitle(String(keys[keyIndex]).uppercased(), for: .normal)
         }
         
         iconsCollection.forEach {
             $0.layer.cornerRadius = 5
             $0.tintColor = .black
         }
+        
+    }
     
+    
+    @IBAction func keyButtonTaped(_ sender: UIButton) {
+        guard let buttonTitle = sender.currentTitle else {return}
+        print(buttonTitle, type(of: buttonTitle))
+        guard let currentText = textField.text else {return}
+        print(currentText)
+        textField.text += buttonTitle
+        
+//        guard textField.text != nil else {return}
+//        print(text)
+//        textField.text = buttonTitle
     }
     
 }
