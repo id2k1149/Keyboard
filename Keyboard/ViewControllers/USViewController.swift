@@ -17,6 +17,7 @@ class USViewController: UIViewController {
     @IBOutlet var iconsCollection: [UIButton]!
     
     let keys: [Character] = Keys().usKeys
+    var currentText: String = TextField.shared.currentText
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,8 @@ class USViewController: UIViewController {
     @IBAction func keyButtonTaped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
+        currentText = textField.text
+        print(currentText)
         
         usKeysCollection.forEach {
             guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
@@ -57,11 +60,15 @@ class USViewController: UIViewController {
     
     @IBAction func spaceButtonTapped() {
         textField.text += " "
+        currentText = textField.text
+        print(currentText)
     }
     
     @IBAction func deleteButtonTapped() {
         textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
 //        print(textField.text ?? "N/A")
+        currentText = textField.text
+        print(currentText)
     }
     
     
