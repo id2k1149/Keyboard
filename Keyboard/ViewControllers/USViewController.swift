@@ -45,7 +45,6 @@ class USViewController: UIViewController {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
         currentText = textField.text
-        print(currentText)
         
         usKeysCollection.forEach {
             guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
@@ -61,14 +60,11 @@ class USViewController: UIViewController {
     @IBAction func spaceButtonTapped() {
         textField.text += " "
         currentText = textField.text
-        print(currentText)
     }
     
     @IBAction func deleteButtonTapped() {
         textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
-//        print(textField.text ?? "N/A")
         currentText = textField.text
-        print(currentText)
     }
     
     
