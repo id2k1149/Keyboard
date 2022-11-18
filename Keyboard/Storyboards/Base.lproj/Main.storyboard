@@ -402,6 +402,9 @@
                                                                 <state key="normal" title="123">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <segue destination="Gl9-r8-bcK" kind="presentation" id="9fb-rI-DWF"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIB-aV-FeY">
                                                                 <rect key="frame" x="37.5" y="0.0" width="33.5" height="28"/>
@@ -531,17 +534,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pv0-zO-DWE" userLabel="Main Stack View">
-                                <rect key="frame" x="16" y="12.5" width="288" height="539.5"/>
+                                <rect key="frame" x="16" y="54" width="288" height="498"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Syx-NE-PlL">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="387.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="346"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6d-9u-Jgt" userLabel="Keyboard View">
-                                        <rect key="frame" x="0.0" y="390.5" width="288" height="149"/>
+                                        <rect key="frame" x="0.0" y="349" width="288" height="149"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="p5I-Q3-dJK" userLabel="Keyboard Stack View">
                                                 <rect key="frame" x="5" y="5" width="278" height="139"/>
@@ -969,7 +972,13 @@
                             <constraint firstItem="Pv0-zO-DWE" firstAttribute="leading" secondItem="bEz-dm-BFZ" secondAttribute="leading" constant="16" id="swc-3K-mLd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oBK-Ep-3Xh"/>
+                    <navigationItem key="navigationItem" id="oBK-Ep-3Xh">
+                        <barButtonItem key="rightBarButtonItem" title="About" id="w13-Ma-gF3">
+                            <connections>
+                                <segue destination="a3D-GV-dd6" kind="show" id="jgC-lr-VxO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="keyboard" destination="D6d-9u-Jgt" id="JfQ-3e-0M2"/>
                         <outlet property="textField" destination="Syx-NE-PlL" id="MVg-XH-CVL"/>
@@ -1007,7 +1016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbN-57-rHG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2736" y="-31"/>
+            <point key="canvasLocation" x="3431" y="-38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m6r-09-PwL">
@@ -1075,9 +1084,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZR-Sj-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959.375" y="730.9859154929577"/>
+            <point key="canvasLocation" x="2708" y="953"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XtC-3s-Hb2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Gl9-r8-bcK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lce-BY-oOX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B3K-D2-1UH" kind="relationship" relationship="rootViewController" id="yeA-Lp-cKY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Unw-An-Kun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2709" y="-38"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jgC-lr-VxO"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="delete.backward" catalog="system" width="128" height="102"/>
         <image name="globe" catalog="system" width="128" height="123"/>
