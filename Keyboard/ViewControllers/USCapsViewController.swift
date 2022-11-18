@@ -15,6 +15,7 @@ class USCapsViewController: UIViewController {
     @IBOutlet var usCapsCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
+    
     let keys: [Character] = USKeys().usKeys
     
     override func viewDidLoad() {
@@ -45,15 +46,13 @@ class USCapsViewController: UIViewController {
     
     @IBAction func keyButtonTaped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
-        print(buttonTitle, type(of: buttonTitle))
-        guard let currentText = textField.text else {return}
-        print(currentText)
         textField.text += buttonTitle
-        
-//        guard textField.text != nil else {return}
-//        print(text)
-//        textField.text = buttonTitle
     }
+    
+    @IBAction func spaceButtonTapped() {
+        textField.text += " "
+    }
+    
     
 }
 
