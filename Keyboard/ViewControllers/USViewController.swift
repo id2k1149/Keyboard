@@ -68,6 +68,7 @@ class USViewController: UIViewController {
         guard let shiftFillImage = UIImage(systemName: "shift.fill") else {return}
         
         switch currentShiftImage.isEqual(shiftFillImage) {
+            
         case true:
             guard let shiftImage = UIImage(systemName: "shift") else {return}
             shiftButton.setImage(shiftImage, for: .normal)
