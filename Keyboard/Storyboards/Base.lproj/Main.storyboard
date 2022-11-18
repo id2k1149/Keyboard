@@ -919,6 +919,11 @@
                         <outletCollection property="numbersCollection" destination="1hB-Lv-0By" collectionClass="NSMutableArray" id="G3h-kj-6qd"/>
                         <outletCollection property="numbersCollection" destination="URM-DH-Wby" collectionClass="NSMutableArray" id="qsT-hS-zHE"/>
                         <outletCollection property="numbersCollection" destination="yra-s5-grP" collectionClass="NSMutableArray" id="j03-7k-cGL"/>
+                        <outletCollection property="iconsCollection" destination="tKo-G3-h3w" collectionClass="NSMutableArray" id="PfK-JM-WW0"/>
+                        <outletCollection property="iconsCollection" destination="Gl3-nk-KpY" collectionClass="NSMutableArray" id="PrX-Xy-Y3f"/>
+                        <outletCollection property="iconsCollection" destination="76G-cE-347" collectionClass="NSMutableArray" id="bc5-Mu-JBg"/>
+                        <outletCollection property="iconsCollection" destination="v79-Mu-aL4" collectionClass="NSMutableArray" id="bjx-wo-z2J"/>
+                        <outletCollection property="iconsCollection" destination="t16-j8-9Nd" collectionClass="NSMutableArray" id="Uds-Hh-W4Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbN-57-rHG" sceneMemberID="firstResponder"/>
