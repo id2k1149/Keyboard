@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50B82E0F2926925800E0A7EC /* USCapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B82E0E2926925800E0A7EC /* USCapsViewController.swift */; };
+		50B82E0F2926925800E0A7EC /* USViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B82E0E2926925800E0A7EC /* USViewController.swift */; };
 		50D59934292402D800175731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D59933292402D800175731 /* AppDelegate.swift */; };
 		50D59936292402D800175731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D59935292402D800175731 /* SceneDelegate.swift */; };
 		50D5993B292402D800175731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D59939292402D800175731 /* Main.storyboard */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50B82E0E2926925800E0A7EC /* USCapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USCapsViewController.swift; sourceTree = "<group>"; };
+		50B82E0E2926925800E0A7EC /* USViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USViewController.swift; sourceTree = "<group>"; };
 		50D59930292402D800175731 /* Keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D59933292402D800175731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D59935292402D800175731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		50D599482924037200175731 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				50B82E0E2926925800E0A7EC /* USCapsViewController.swift */,
+				50B82E0E2926925800E0A7EC /* USViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 				50E44DE629246BA3002A5092 /* DataSource.swift in Sources */,
 				50E44DE329246AFF002A5092 /* TextField.swift in Sources */,
 				50FB70372926BB6D00A66D45 /* USKeys.swift in Sources */,
-				50B82E0F2926925800E0A7EC /* USCapsViewController.swift in Sources */,
+				50B82E0F2926925800E0A7EC /* USViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
