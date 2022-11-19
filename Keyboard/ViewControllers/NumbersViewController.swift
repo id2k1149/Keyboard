@@ -26,7 +26,7 @@ class NumbersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // to disable iOS/MacOS keyboard
+        // to disable iOS keyboard
         textField.inputView = UIView()
         
         textField.layer.cornerRadius = 10

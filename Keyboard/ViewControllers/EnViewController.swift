@@ -25,8 +25,10 @@ class EnViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // to disable iOS/MacOS keyboard
+        // to disable iOS keyboard
         textField.inputView = UIView()
+        // to disable macOS keyboard
+        // textField.isEditable = false
         
         textField.layer.cornerRadius = 10
         keyboard.layer.cornerRadius = 10
@@ -36,8 +38,8 @@ class EnViewController: UIViewController {
         setupIconsCollection()
     }
     
-    // to set focus on TextField
     override func viewDidAppear(_ animated: Bool) {
+        // to add focus to textField
         textField.becomeFirstResponder()
     }
     
