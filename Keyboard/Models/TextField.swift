@@ -9,8 +9,7 @@
 class TextField {
     static var shared = TextField()
     
-    var currentText: String = """
-"""
+    var currentText: String = ""
     
     private init() {}
 }
