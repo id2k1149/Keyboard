@@ -48,12 +48,9 @@ class NumbersViewController: UIViewController {
     @IBAction func keyButtonTapped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
+        currentText = textField.text
+        print(currentText ?? "N/A")
         
-        
-        numbersCollection.forEach {
-            guard let keyIndex = numbersCollection.firstIndex(of: $0) else {return}
-            $0.setTitle(String(numbers[keyIndex]), for: .normal)
-        }
     }
     
     
