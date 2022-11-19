@@ -48,7 +48,6 @@ class EnViewController: UIViewController {
         
         numbersVC.currentText = currentText
         
-        
     }
     
     @IBAction func keyButtonTaped(_ sender: UIButton) {

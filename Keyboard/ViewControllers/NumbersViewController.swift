@@ -45,6 +45,15 @@ class NumbersViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let ruKeysVC = navigationVC.topViewController as? RuViewController else { return }
+
+//        numbersVC.currentText = currentText
+
+    }
+    
     @IBAction func keyButtonTapped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
@@ -65,6 +74,11 @@ class NumbersViewController: UIViewController {
     @IBAction func returnButtonTapped() {
         textField.text += "\n"
         currentText = textField.text
+    }
+    
+    @IBAction func globeButtonTapped() {
+        performSegue(withIdentifier: "ruNavController",
+                     sender: nil)
     }
     
 }
