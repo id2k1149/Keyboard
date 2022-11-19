@@ -48,16 +48,23 @@ class NumbersViewController: UIViewController {
     @IBAction func keyButtonTapped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
-        
-        
-        numbersCollection.forEach {
-            guard let keyIndex = numbersCollection.firstIndex(of: $0) else {return}
-            $0.setTitle(String(numbers[keyIndex]), for: .normal)
-        }
+        currentText = textField.text
+        print(currentText ?? "N/A")
     }
     
+    @IBAction func spaceButtonTapped() {
+        textField.text += " "
+        currentText = textField.text
+    }
     
+    @IBAction func deleteButtonTapped() {
+        textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
+        currentText = textField.text
+    }
     
-    
+    @IBAction func returnButtonTapped() {
+        textField.text += "\n"
+        currentText = textField.text
+    }
     
 }

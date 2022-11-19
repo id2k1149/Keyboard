@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="1129" y="-397"/>
         </scene>
-        <!--US View Controller-->
+        <!--EN View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="US View Controller" customClass="USViewController" customModule="Keyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="EN View Controller" customClass="EnViewController" customModule="Keyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -454,6 +454,9 @@
                                                                 <state key="normal" title="return">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="returnButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="PoS-9v-bpb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -505,32 +508,32 @@
                         <outlet property="keyboard" destination="FUP-U5-dW3" id="LtJ-53-Ysf"/>
                         <outlet property="shiftButton" destination="uR5-Hc-Aup" id="xl7-aX-QUh"/>
                         <outlet property="textField" destination="fnO-te-vwj" id="RxR-yP-KGm"/>
-                        <outletCollection property="usKeysCollection" destination="Wfd-9J-0u2" collectionClass="NSMutableArray" id="c0c-gR-6po"/>
-                        <outletCollection property="usKeysCollection" destination="BEt-nc-HUn" collectionClass="NSMutableArray" id="YWg-ey-MTv"/>
-                        <outletCollection property="usKeysCollection" destination="v9O-yE-pZc" collectionClass="NSMutableArray" id="Z0C-SK-NKy"/>
-                        <outletCollection property="usKeysCollection" destination="Mbz-HZ-sic" collectionClass="NSMutableArray" id="tkm-Nk-PwT"/>
-                        <outletCollection property="usKeysCollection" destination="U7a-R3-brM" collectionClass="NSMutableArray" id="CcX-mD-S6R"/>
-                        <outletCollection property="usKeysCollection" destination="pRK-LV-KJh" collectionClass="NSMutableArray" id="xvw-VJ-EhL"/>
-                        <outletCollection property="usKeysCollection" destination="LEf-MX-hsa" collectionClass="NSMutableArray" id="dK4-5g-So6"/>
-                        <outletCollection property="usKeysCollection" destination="8FW-3M-9oi" collectionClass="NSMutableArray" id="MrU-tc-2Db"/>
-                        <outletCollection property="usKeysCollection" destination="HfN-oO-IAf" collectionClass="NSMutableArray" id="7kD-xr-e1V"/>
-                        <outletCollection property="usKeysCollection" destination="gH7-Tg-Y0u" collectionClass="NSMutableArray" id="Qkt-3Z-jpZ"/>
-                        <outletCollection property="usKeysCollection" destination="gcc-LL-RlN" collectionClass="NSMutableArray" id="JCt-6M-I9M"/>
-                        <outletCollection property="usKeysCollection" destination="Cs8-SW-XSC" collectionClass="NSMutableArray" id="SLh-cc-K8w"/>
-                        <outletCollection property="usKeysCollection" destination="y4b-ax-3s8" collectionClass="NSMutableArray" id="84T-Gi-TFN"/>
-                        <outletCollection property="usKeysCollection" destination="Kny-LX-geb" collectionClass="NSMutableArray" id="l9i-bX-1lf"/>
-                        <outletCollection property="usKeysCollection" destination="lqs-Yy-yrZ" collectionClass="NSMutableArray" id="KJ2-Ap-VPw"/>
-                        <outletCollection property="usKeysCollection" destination="pMv-fx-s91" collectionClass="NSMutableArray" id="lmw-M8-FBv"/>
-                        <outletCollection property="usKeysCollection" destination="jXI-c1-zNX" collectionClass="NSMutableArray" id="d6D-7P-mJI"/>
-                        <outletCollection property="usKeysCollection" destination="HxX-Q7-OWC" collectionClass="NSMutableArray" id="Rxc-v3-Isy"/>
-                        <outletCollection property="usKeysCollection" destination="Ihz-hl-02X" collectionClass="NSMutableArray" id="yKK-MF-wrq"/>
-                        <outletCollection property="usKeysCollection" destination="N2W-g2-Dg5" collectionClass="NSMutableArray" id="Mp8-EP-nBJ"/>
-                        <outletCollection property="usKeysCollection" destination="IVS-63-Ypk" collectionClass="NSMutableArray" id="7cl-gr-jwW"/>
-                        <outletCollection property="usKeysCollection" destination="0nK-3U-9nN" collectionClass="NSMutableArray" id="T3o-nH-hiW"/>
-                        <outletCollection property="usKeysCollection" destination="NdV-cu-MAB" collectionClass="NSMutableArray" id="UIb-Nx-n9W"/>
-                        <outletCollection property="usKeysCollection" destination="Oyf-b3-j1g" collectionClass="NSMutableArray" id="xhw-cb-0a6"/>
-                        <outletCollection property="usKeysCollection" destination="gkv-BW-ivV" collectionClass="NSMutableArray" id="EZ2-Lh-Vgq"/>
-                        <outletCollection property="usKeysCollection" destination="KLx-Jm-pMb" collectionClass="NSMutableArray" id="6la-LY-3DI"/>
+                        <outletCollection property="enKeysCollection" destination="Wfd-9J-0u2" collectionClass="NSMutableArray" id="c0c-gR-6po"/>
+                        <outletCollection property="enKeysCollection" destination="BEt-nc-HUn" collectionClass="NSMutableArray" id="YWg-ey-MTv"/>
+                        <outletCollection property="enKeysCollection" destination="v9O-yE-pZc" collectionClass="NSMutableArray" id="Z0C-SK-NKy"/>
+                        <outletCollection property="enKeysCollection" destination="Mbz-HZ-sic" collectionClass="NSMutableArray" id="tkm-Nk-PwT"/>
+                        <outletCollection property="enKeysCollection" destination="U7a-R3-brM" collectionClass="NSMutableArray" id="CcX-mD-S6R"/>
+                        <outletCollection property="enKeysCollection" destination="pRK-LV-KJh" collectionClass="NSMutableArray" id="xvw-VJ-EhL"/>
+                        <outletCollection property="enKeysCollection" destination="LEf-MX-hsa" collectionClass="NSMutableArray" id="dK4-5g-So6"/>
+                        <outletCollection property="enKeysCollection" destination="8FW-3M-9oi" collectionClass="NSMutableArray" id="MrU-tc-2Db"/>
+                        <outletCollection property="enKeysCollection" destination="HfN-oO-IAf" collectionClass="NSMutableArray" id="7kD-xr-e1V"/>
+                        <outletCollection property="enKeysCollection" destination="gH7-Tg-Y0u" collectionClass="NSMutableArray" id="Qkt-3Z-jpZ"/>
+                        <outletCollection property="enKeysCollection" destination="gcc-LL-RlN" collectionClass="NSMutableArray" id="JCt-6M-I9M"/>
+                        <outletCollection property="enKeysCollection" destination="Cs8-SW-XSC" collectionClass="NSMutableArray" id="SLh-cc-K8w"/>
+                        <outletCollection property="enKeysCollection" destination="y4b-ax-3s8" collectionClass="NSMutableArray" id="84T-Gi-TFN"/>
+                        <outletCollection property="enKeysCollection" destination="Kny-LX-geb" collectionClass="NSMutableArray" id="l9i-bX-1lf"/>
+                        <outletCollection property="enKeysCollection" destination="lqs-Yy-yrZ" collectionClass="NSMutableArray" id="KJ2-Ap-VPw"/>
+                        <outletCollection property="enKeysCollection" destination="pMv-fx-s91" collectionClass="NSMutableArray" id="lmw-M8-FBv"/>
+                        <outletCollection property="enKeysCollection" destination="jXI-c1-zNX" collectionClass="NSMutableArray" id="d6D-7P-mJI"/>
+                        <outletCollection property="enKeysCollection" destination="HxX-Q7-OWC" collectionClass="NSMutableArray" id="Rxc-v3-Isy"/>
+                        <outletCollection property="enKeysCollection" destination="Ihz-hl-02X" collectionClass="NSMutableArray" id="yKK-MF-wrq"/>
+                        <outletCollection property="enKeysCollection" destination="N2W-g2-Dg5" collectionClass="NSMutableArray" id="Mp8-EP-nBJ"/>
+                        <outletCollection property="enKeysCollection" destination="IVS-63-Ypk" collectionClass="NSMutableArray" id="7cl-gr-jwW"/>
+                        <outletCollection property="enKeysCollection" destination="0nK-3U-9nN" collectionClass="NSMutableArray" id="T3o-nH-hiW"/>
+                        <outletCollection property="enKeysCollection" destination="NdV-cu-MAB" collectionClass="NSMutableArray" id="UIb-Nx-n9W"/>
+                        <outletCollection property="enKeysCollection" destination="Oyf-b3-j1g" collectionClass="NSMutableArray" id="xhw-cb-0a6"/>
+                        <outletCollection property="enKeysCollection" destination="gkv-BW-ivV" collectionClass="NSMutableArray" id="EZ2-Lh-Vgq"/>
+                        <outletCollection property="enKeysCollection" destination="KLx-Jm-pMb" collectionClass="NSMutableArray" id="6la-LY-3DI"/>
                         <outletCollection property="iconsCollection" destination="uR5-Hc-Aup" collectionClass="NSMutableArray" id="fhZ-NQ-8zS"/>
                         <outletCollection property="iconsCollection" destination="c0V-yd-Sa6" collectionClass="NSMutableArray" id="WGD-Fh-eG0"/>
                         <outletCollection property="iconsCollection" destination="YPh-rh-RpW" collectionClass="NSMutableArray" id="ghJ-0d-nhq"/>
@@ -976,6 +979,9 @@
                                                                 <state key="normal" image="delete.backward" catalog="system">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="deleteButtonTapped" destination="B3K-D2-1UH" eventType="touchUpInside" id="tVc-rz-lwP"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -1009,6 +1015,9 @@
                                                                 <state key="normal" title="space">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="spaceButtonTapped" destination="B3K-D2-1UH" eventType="touchUpInside" id="uyc-aG-Ga2"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t16-j8-9Nd">
                                                                 <rect key="frame" x="198" y="0.0" width="80" height="28"/>
@@ -1020,6 +1029,9 @@
                                                                 <state key="normal" title="return">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="returnButtonTapped" destination="B3K-D2-1UH" eventType="touchUpInside" id="Zot-7A-Mom"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
