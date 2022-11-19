@@ -11,11 +11,5 @@ class RuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
     }
-    
-
-    
-
 }

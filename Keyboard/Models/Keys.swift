@@ -11,6 +11,7 @@ class Keys {
     
     let enKeys  = DataStore.shared.enKeys
     let numbersKeys = DataStore.shared.numbersKeys
+    let symbolsKeys = DataStore.shared.specialKeys
     
     private init() {}
 }

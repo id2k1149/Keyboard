@@ -599,7 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZR-Sj-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295" y="2468"/>
+            <point key="canvasLocation" x="2295" y="2547"/>
         </scene>
         <!--Numbers Navigation Controller-->
         <scene sceneID="X4v-fa-iMV">
@@ -906,11 +906,14 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKo-G3-h3w">
                                                                 <rect key="frame" x="0.0" y="0.0" width="35.5" height="28"/>
                                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="#+=">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="symbolsButtonTapped" destination="B3K-D2-1UH" eventType="touchUpInside" id="DGo-yq-RFh"/>
+                                                                </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mUp-IZ-Mj3" userLabel="Low Letters Stack View">
                                                                 <rect key="frame" x="47.5" y="0.0" width="183" height="28"/>
@@ -1088,6 +1091,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="keyboard" destination="D6d-9u-Jgt" id="JfQ-3e-0M2"/>
+                        <outlet property="symbolsButton" destination="tKo-G3-h3w" id="UI3-q8-LvA"/>
                         <outlet property="textField" destination="Syx-NE-PlL" id="MVg-XH-CVL"/>
                         <outletCollection property="numbersCollection" destination="i0B-Ws-ZS3" collectionClass="NSMutableArray" id="ak5-f8-gHX"/>
                         <outletCollection property="numbersCollection" destination="is3-QP-01O" collectionClass="NSMutableArray" id="HLe-c8-MIl"/>
@@ -1170,7 +1174,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="WcC-Ox-aaE"/>
-        <segue reference="5HX-ao-Wg7"/>
+        <segue reference="jgC-lr-VxO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="delete.backward" catalog="system" width="128" height="102"/>
