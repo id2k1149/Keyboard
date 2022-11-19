@@ -16,15 +16,21 @@ class NumbersViewController: UIViewController {
     @IBOutlet var iconsCollection: [UIButton]!
     
     let numbers = Keys().numbersKeys
+    var currentText: String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(currentText ?? "current text = N/A")
         
         // to hide iOS keyboard
         textField.inputView = UIView()
         
         textField.layer.cornerRadius = 10
         keyboard.layer.cornerRadius = 10
+        
+        textField.text = currentText
         
         numbersCollection.forEach {
             $0.layer.cornerRadius = 5

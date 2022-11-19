@@ -30,7 +30,7 @@ class USViewController: UIViewController {
         
         usKeysCollection.forEach {
             $0.layer.cornerRadius = 5
-            guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
+            guard let keyIndex = usKeysCollection.firstIndex(of: $0) else { return }
             $0.setTitle(String(keys[keyIndex]).uppercased(), for: .normal)
         }
         
@@ -41,17 +41,27 @@ class USViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let numbersVC = navigationVC.topViewController as? NumbersViewController else { return }
+        
+        numbersVC.currentText = currentText
+        
+        
+    }
+    
     @IBAction func keyButtonTaped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
         currentText = textField.text
         
         usKeysCollection.forEach {
-            guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
+            guard let keyIndex = usKeysCollection.firstIndex(of: $0) else { return }
             $0.setTitle(String(keys[keyIndex]), for: .normal)
         }
         
-        guard let shiftImage = UIImage(systemName: "shift") else {return}
+        guard let shiftImage = UIImage(systemName: "shift") else { return }
         shiftButton.setImage(
             shiftImage,
             for: .normal)
@@ -69,26 +79,26 @@ class USViewController: UIViewController {
     
     
     @IBAction func shiftButtonTapped() {
-        guard let currentShiftImage = shiftButton.currentImage else {return}
-        guard let shiftFillImage = UIImage(systemName: "shift.fill") else {return}
+        guard let currentShiftImage = shiftButton.currentImage else { return }
+        guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
         
         switch currentShiftImage.isEqual(shiftFillImage) {
             
         case true:
-            guard let shiftImage = UIImage(systemName: "shift") else {return}
+            guard let shiftImage = UIImage(systemName: "shift") else { return }
             shiftButton.setImage(shiftImage, for: .normal)
             usKeysCollection.forEach {
-                guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
+                guard let keyIndex = usKeysCollection.firstIndex(of: $0) else { return }
                 $0.setTitle(
                     String(keys[keyIndex]),
                     for: .normal)
             }
             
         case false:
-            guard let shiftImage = UIImage(systemName: "shift.fill") else {return}
+            guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
             shiftButton.setImage(shiftImage, for: .normal)
             usKeysCollection.forEach {
-                guard let keyIndex = usKeysCollection.firstIndex(of: $0) else {return}
+                guard let keyIndex = usKeysCollection.firstIndex(of: $0) else { return }
                 $0.setTitle(
                     String(keys[keyIndex]).uppercased(),
                     for: .normal)
