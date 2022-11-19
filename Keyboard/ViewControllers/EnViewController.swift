@@ -31,8 +31,14 @@ class EnViewController: UIViewController {
         textField.layer.cornerRadius = 10
         keyboard.layer.cornerRadius = 10
         
-        setupKeysCollection()
+        setupKeysCollectionCorners()
+        setupKeysCollectionTitles()
         setupIconsCollection()
+    }
+    
+    // to set focus on TextField
+    override func viewDidAppear(_ animated: Bool) {
+        textField.becomeFirstResponder()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -118,9 +124,14 @@ class EnViewController: UIViewController {
     }
     
     // MARK: private methods
-    private func setupKeysCollection() {
+    private func setupKeysCollectionCorners() {
         enKeysCollection.forEach {
             $0.layer.cornerRadius = 5
+        }
+    }
+    
+    private func setupKeysCollectionTitles() {
+        enKeysCollection.forEach {
             guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
             $0.setTitle(String(keys[keyIndex]).uppercased(), for: .normal)
         }

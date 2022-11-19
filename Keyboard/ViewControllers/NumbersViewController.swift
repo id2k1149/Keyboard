@@ -34,8 +34,14 @@ class NumbersViewController: UIViewController {
         
         textField.text = currentText
         
-        setupKeysCollection()
+        setupKeysCollectionCorners()
+        setupKeysCollectionTitles(for: numbers)
         setupIconsCollection()
+    }
+    
+    // to set focus on TextField
+    override func viewDidAppear(_ animated: Bool) {
+        textField.becomeFirstResponder()
     }
     
     /* segue for RuViewController
@@ -71,8 +77,7 @@ class NumbersViewController: UIViewController {
     }
     
     @IBAction func globeButtonTapped() {
-        performSegue(withIdentifier: "ruNavController",
-                     sender: nil)
+        performSegue(withIdentifier: "ruNavController", sender: nil)
     }
     
     @IBAction func symbolsButtonTapped() {
@@ -82,34 +87,27 @@ class NumbersViewController: UIViewController {
 
         case "#+=":
             symbolsButton.setTitle("123", for: .normal)
-
-            numbersCollection.forEach {
-                guard let keyIndex = numbersCollection.firstIndex(of: $0) else { return }
-                $0.setTitle(
-                    String(symbols[keyIndex]),
-                    for: .normal)
-            }
+            setupKeysCollectionTitles(for: symbols)
 
         default:
             symbolsButton.setTitle("#+=", for: .normal)
-            
-            numbersCollection.forEach {
-                guard let keyIndex = numbersCollection.firstIndex(of: $0) else { return }
-                $0.setTitle(
-                    String(numbers[keyIndex]),
-                    for: .normal)
-            }
+            setupKeysCollectionTitles(for: numbers)
         }
         
         symbolsButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
     }
     
     // MARK: private methods
-    private func setupKeysCollection() {
+    private func setupKeysCollectionCorners() {
         numbersCollection.forEach {
             $0.layer.cornerRadius = 5
+        }
+    }
+    
+    private func setupKeysCollectionTitles(for keys: [Character]) {
+        numbersCollection.forEach {
             guard let keyIndex = numbersCollection.firstIndex(of: $0) else {return}
-            $0.setTitle(String(numbers[keyIndex]),
+            $0.setTitle(String(keys[keyIndex]),
                         for: .normal)
         }
     }
