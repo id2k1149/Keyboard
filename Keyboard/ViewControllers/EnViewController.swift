@@ -38,16 +38,13 @@ class EnViewController: UIViewController {
             $0.layer.cornerRadius = 5
             $0.tintColor = .black
         }
-        
     }
     
-    override func prepare(for segue: UIStoryboardSegue,
-                          sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationVC = segue.destination as? UINavigationController else { return }
         guard let numbersVC = navigationVC.topViewController as? NumbersViewController else { return }
         
         numbersVC.currentText = currentText
-        
     }
     
     @IBAction func keyButtonTaped(_ sender: UIButton) {
@@ -75,7 +72,6 @@ class EnViewController: UIViewController {
         textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
         currentText = textField.text
     }
-    
     
     @IBAction func shiftButtonTapped() {
         guard let currentShiftImage = shiftButton.currentImage else { return }
@@ -110,17 +106,18 @@ class EnViewController: UIViewController {
         currentText = textField.text
     }
     
-    
     @IBAction func numbersButtonTapped() {
         performSegue(withIdentifier: "numbersNavController",
                      sender: nil)
     }
-    
     
     @IBAction func globeButtonTapped() {
         performSegue(withIdentifier: "ruNavController",
                      sender: nil)
     }
     
-    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let numbersVC = segue.source as? NumbersViewController else { return }
+        textField.text = numbersVC.currentText
+    }
 }

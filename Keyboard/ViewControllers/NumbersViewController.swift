@@ -58,7 +58,6 @@ class NumbersViewController: UIViewController {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
         currentText = textField.text
-        print(currentText ?? "N/A")
     }
     
     @IBAction func spaceButtonTapped() {
