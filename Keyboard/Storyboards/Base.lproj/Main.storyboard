@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="346"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUP-U5-dW3" userLabel="Keyboard View">
@@ -403,7 +403,7 @@
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="B3K-D2-1UH" kind="show" id="KL1-Bz-lGc"/>
+                                                                    <segue destination="aPI-hJ-hVb" kind="show" id="KL1-Bz-lGc"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIB-aV-FeY">
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="-397"/>
+            <point key="canvasLocation" x="1888" y="-397"/>
         </scene>
         <!--numbers View Controller-->
         <scene sceneID="hBS-0Z-mXL">
@@ -1016,7 +1016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbN-57-rHG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="411"/>
+            <point key="canvasLocation" x="3495" y="-397"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m6r-09-PwL">
@@ -1084,30 +1084,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZR-Sj-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3101" y="12"/>
+            <point key="canvasLocation" x="2663" y="405"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="XtC-3s-Hb2">
+        <scene sceneID="X4v-fa-iMV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Gl9-r8-bcK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="aPI-hJ-hVb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lce-BY-oOX">
+                    <navigationItem key="navigationItem" id="laA-kp-HC4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PVJ-RU-JOo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="B3K-D2-1UH" kind="relationship" relationship="rootViewController" id="yeA-Lp-cKY"/>
+                        <segue destination="B3K-D2-1UH" kind="relationship" relationship="rootViewController" id="229-a2-FFe"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Unw-An-Kun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UnE-JB-0Hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="411"/>
+            <point key="canvasLocation" x="2663" y="-397"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jgC-lr-VxO"/>
-        <segue reference="yeA-Lp-cKY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="delete.backward" catalog="system" width="128" height="102"/>
