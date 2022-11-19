@@ -403,7 +403,7 @@
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="Gl9-r8-bcK" kind="presentation" id="9fb-rI-DWF"/>
+                                                                    <segue destination="B3K-D2-1UH" kind="show" id="KL1-Bz-lGc"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIB-aV-FeY">
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961.25" y="-38.028169014084504"/>
+            <point key="canvasLocation" x="2012" y="-397"/>
         </scene>
         <!--numbers View Controller-->
         <scene sceneID="hBS-0Z-mXL">
@@ -1016,7 +1016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbN-57-rHG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3431" y="-38"/>
+            <point key="canvasLocation" x="2012" y="411"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m6r-09-PwL">
@@ -1034,7 +1034,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71z-NC-AIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1217" y="-38"/>
+            <point key="canvasLocation" x="1129" y="-397"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0V4-Cc-imk">
@@ -1084,7 +1084,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZR-Sj-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2708" y="953"/>
+            <point key="canvasLocation" x="3101" y="12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XtC-3s-Hb2">
@@ -1102,11 +1102,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unw-An-Kun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2709" y="-38"/>
+            <point key="canvasLocation" x="1129" y="411"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jgC-lr-VxO"/>
+        <segue reference="yeA-Lp-cKY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="delete.backward" catalog="system" width="128" height="102"/>
