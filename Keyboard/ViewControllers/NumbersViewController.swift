@@ -15,7 +15,7 @@ class NumbersViewController: UIViewController {
     @IBOutlet var numbersCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
-    let numbers = Keys().numbersKeys
+    let numbers = Keys.shared.numbersKeys
     var currentText: String!
     
     

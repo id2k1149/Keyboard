@@ -16,7 +16,7 @@ class EnViewController: UIViewController {
     @IBOutlet var enKeysCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
-    let keys: [Character] = Keys().usKeys
+    let keys: [Character] = Keys.shared.usKeys
     var currentText: String = TextField.shared.currentText
     
     override func viewDidLoad() {
