@@ -9,21 +9,55 @@ import UIKit
 
 class NumbersViewController: UIViewController {
 
+    @IBOutlet var textField: UITextView!
+    @IBOutlet var keyboard: UIView!
+    
+    @IBOutlet var numbersCollection: [UIButton]!
+    @IBOutlet var iconsCollection: [UIButton]!
+    
+    let numbers = Keys().numbersKeys
+    var currentText: String!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        print(currentText ?? "current text = N/A")
+        
+        // to hide iOS keyboard
+        textField.inputView = UIView()
+        
+        textField.layer.cornerRadius = 10
+        keyboard.layer.cornerRadius = 10
+        
+        textField.text = currentText
+        
+        numbersCollection.forEach {
+            $0.layer.cornerRadius = 5
+            guard let keyIndex = numbersCollection.firstIndex(of: $0) else {return}
+            $0.setTitle(String(numbers[keyIndex]),
+                        for: .normal)
+        }
+        
+        iconsCollection.forEach {
+            $0.layer.cornerRadius = 5
+            $0.tintColor = .black
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func keyButtonTapped(_ sender: UIButton) {
+        guard let buttonTitle = sender.currentTitle else {return}
+        textField.text += buttonTitle
+        
+        
+        numbersCollection.forEach {
+            guard let keyIndex = numbersCollection.firstIndex(of: $0) else {return}
+            $0.setTitle(String(numbers[keyIndex]), for: .normal)
+        }
     }
-    */
-
+    
+    
+    
+    
+    
 }

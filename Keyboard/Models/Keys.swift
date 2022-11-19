@@ -6,8 +6,8 @@
 //
 
 struct Keys {
-    let usKeys: [Character] = DataStore.getKeysForUSLayout()
-    let numbersKeys: [Character] = DataStore.getKeysForNumberLayout()
+    let usKeys  = DataStore.shared.usKeys
+    let numbersKeys = DataStore.shared.numbersKeys
     
     
 }
