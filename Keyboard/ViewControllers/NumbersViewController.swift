@@ -15,7 +15,7 @@ class NumbersViewController: UIViewController {
     @IBOutlet var numbersCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
-    let numbers = Keys().numbersKeys
+    let numbers = Keys.shared.numbersKeys
     var currentText: String!
     
     
@@ -24,7 +24,7 @@ class NumbersViewController: UIViewController {
         
         print(currentText ?? "current text = N/A")
         
-        // to hide iOS keyboard
+        // to disable iOS/MacOS keyboard
         textField.inputView = UIView()
         
         textField.layer.cornerRadius = 10
@@ -43,6 +43,15 @@ class NumbersViewController: UIViewController {
             $0.layer.cornerRadius = 5
             $0.tintColor = .black
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let ruKeysVC = navigationVC.topViewController as? RuViewController else { return }
+
+//        numbersVC.currentText = currentText
+
     }
     
     @IBAction func keyButtonTapped(_ sender: UIButton) {
@@ -65,6 +74,11 @@ class NumbersViewController: UIViewController {
     @IBAction func returnButtonTapped() {
         textField.text += "\n"
         currentText = textField.text
+    }
+    
+    @IBAction func globeButtonTapped() {
+        performSegue(withIdentifier: "ruNavController",
+                     sender: nil)
     }
     
 }
