@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71z-NC-AIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="-24"/>
+            <point key="canvasLocation" x="2419" y="-791"/>
         </scene>
         <!--EN View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -421,7 +421,7 @@
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="aPI-hJ-hVb" kind="show" id="KL1-Bz-lGc"/>
+                                                                    <action selector="numbersButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="u1l-o4-JU5"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIB-aV-FeY">
@@ -429,6 +429,9 @@
                                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" image="globe" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="globeButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6g-PO-M1G"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jB-yT-v63">
                                                                 <rect key="frame" x="75" y="0.0" width="119" height="28"/>
@@ -540,11 +543,13 @@
                         <outletCollection property="iconsCollection" destination="rIB-aV-FeY" collectionClass="NSMutableArray" id="h4r-V0-RAy"/>
                         <outletCollection property="iconsCollection" destination="Lop-hn-sNQ" collectionClass="NSMutableArray" id="RqH-Q1-AVk"/>
                         <outletCollection property="iconsCollection" destination="5jB-yT-v63" collectionClass="NSMutableArray" id="Zdu-Kf-V8B"/>
+                        <segue destination="aPI-hJ-hVb" kind="presentation" identifier="numbersNavController" id="elb-wl-LhH"/>
+                        <segue destination="hNl-DV-3CI" kind="presentation" identifier="ruNavController" id="lea-mj-EzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856" y="-24"/>
+            <point key="canvasLocation" x="2419" y="-24"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="0V4-Cc-imk">
@@ -594,7 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZR-Sj-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3311" y="-24"/>
+            <point key="canvasLocation" x="2363" y="2585"/>
         </scene>
         <!--Numbers Navigation Controller-->
         <scene sceneID="X4v-fa-iMV">
@@ -613,7 +618,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnE-JB-0Hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3347" y="-880"/>
+            <point key="canvasLocation" x="1748" y="843"/>
         </scene>
         <!--Numbers View Controller-->
         <scene sceneID="hBS-0Z-mXL">
@@ -1115,11 +1120,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbN-57-rHG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4223" y="-879"/>
+            <point key="canvasLocation" x="1748" y="1692"/>
+        </scene>
+        <!--RU Navigation Controller-->
+        <scene sceneID="0v7-bw-iEM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="hNl-DV-3CI" userLabel="RU Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WpR-Ey-cbA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wmv-T0-aC2" kind="relationship" relationship="rootViewController" id="cfS-xz-Vze"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNP-Gg-6zM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3058" y="843"/>
+        </scene>
+        <!--RU View Controller-->
+        <scene sceneID="jmw-Gi-VQI">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="wmv-T0-aC2" userLabel="RU View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fv1-RD-OlI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZxR-qh-Wo7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tqY-jZ-t4T">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0CR-vQ-76a"/>
+                        <barButtonItem key="rightBarButtonItem" title="About" id="YHt-6t-Jsb">
+                            <connections>
+                                <segue destination="a3D-GV-dd6" kind="show" id="5HX-ao-Wg7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pW-er-sXq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3056" y="1693"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jgC-lr-VxO"/>
+        <segue reference="5HX-ao-Wg7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="delete.backward" catalog="system" width="128" height="102"/>

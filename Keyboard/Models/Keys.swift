@@ -9,7 +9,7 @@
 class Keys {
     static var shared = Keys()
     
-    let usKeys  = DataStore.shared.enKeys
+    let enKeys  = DataStore.shared.enKeys
     let numbersKeys = DataStore.shared.numbersKeys
     
     private init() {}

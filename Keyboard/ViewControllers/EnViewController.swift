@@ -16,13 +16,13 @@ class EnViewController: UIViewController {
     @IBOutlet var enKeysCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
-    let keys: [Character] = Keys.shared.usKeys
+    let keys: [Character] = Keys.shared.enKeys
     var currentText: String = TextField.shared.currentText
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // to hide iOS keyboard
+        // to disable iOS/MacOS keyboard
         textField.inputView = UIView()
         
         textField.layer.cornerRadius = 10
@@ -110,5 +110,18 @@ class EnViewController: UIViewController {
         textField.text += "\n"
         currentText = textField.text
     }
+    
+    
+    @IBAction func numbersButtonTapped() {
+        performSegue(withIdentifier: "numbersNavController",
+                     sender: nil)
+    }
+    
+    
+    @IBAction func globeButtonTapped() {
+        performSegue(withIdentifier: "ruNavController",
+                     sender: nil)
+    }
+    
     
 }

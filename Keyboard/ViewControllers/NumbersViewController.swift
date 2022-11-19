@@ -24,7 +24,7 @@ class NumbersViewController: UIViewController {
         
         print(currentText ?? "current text = N/A")
         
-        // to hide iOS keyboard
+        // to disable iOS/MacOS keyboard
         textField.inputView = UIView()
         
         textField.layer.cornerRadius = 10
