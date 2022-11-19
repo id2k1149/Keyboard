@@ -9,6 +9,7 @@ import UIKit
 
 class NumbersViewController: UIViewController {
 
+    // MARK: IBOutlet
     @IBOutlet var textField: UITextView!
     @IBOutlet var keyboard: UIView!
     @IBOutlet var symbolsButton: UIButton!
@@ -16,10 +17,12 @@ class NumbersViewController: UIViewController {
     @IBOutlet var numbersCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
+    // MARK: variables and constants
     let numbers = Keys.shared.numbersKeys
     let symbols = Keys.shared.symbolsKeys
     var currentText: String!
     
+    // MARK: override functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,20 +34,11 @@ class NumbersViewController: UIViewController {
         
         textField.text = currentText
         
-        numbersCollection.forEach {
-            $0.layer.cornerRadius = 5
-            guard let keyIndex = numbersCollection.firstIndex(of: $0) else {return}
-            $0.setTitle(String(numbers[keyIndex]),
-                        for: .normal)
-        }
-        
-        iconsCollection.forEach {
-            $0.layer.cornerRadius = 5
-            $0.tintColor = .black
-        }
+        setupKeysCollection()
+        setupIconsCollection()
     }
     
-    /*
+    /* segue for RuViewController
     override func prepare(for segue: UIStoryboardSegue,
                           sender: Any?) {
         guard let navigationVC = segue.destination as? UINavigationController else { return }
@@ -54,6 +48,7 @@ class NumbersViewController: UIViewController {
     }
      */
     
+    // MARK: IBAction
     @IBAction func keyButtonTapped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
@@ -109,4 +104,20 @@ class NumbersViewController: UIViewController {
         symbolsButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
     }
     
+    // MARK: private methods
+    private func setupKeysCollection() {
+        numbersCollection.forEach {
+            $0.layer.cornerRadius = 5
+            guard let keyIndex = numbersCollection.firstIndex(of: $0) else {return}
+            $0.setTitle(String(numbers[keyIndex]),
+                        for: .normal)
+        }
+    }
+    
+    private func setupIconsCollection() {
+        iconsCollection.forEach {
+            $0.layer.cornerRadius = 5
+            $0.tintColor = .black
+        }
+    }
 }
