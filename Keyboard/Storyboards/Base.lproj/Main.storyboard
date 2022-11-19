@@ -14,7 +14,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uTz-yw-i1n" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="68U-ff-tx4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -454,6 +454,9 @@
                                                                 <state key="normal" title="return">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="returnButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="PoS-9v-bpb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -1026,6 +1029,9 @@
                                                                 <state key="normal" title="return">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="returnButtonTapped" destination="B3K-D2-1UH" eventType="touchUpInside" id="Zot-7A-Mom"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>

@@ -62,4 +62,9 @@ class NumbersViewController: UIViewController {
         currentText = textField.text
     }
     
+    @IBAction func returnButtonTapped() {
+        textField.text += "\n"
+        currentText = textField.text
+    }
+    
 }

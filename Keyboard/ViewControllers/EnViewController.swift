@@ -105,6 +105,12 @@ class EnViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func returnButtonTapped() {
+        textField.text += "\n"
+        currentText = textField.text
+    }
+    
 }
 
 // MARK: - extension
