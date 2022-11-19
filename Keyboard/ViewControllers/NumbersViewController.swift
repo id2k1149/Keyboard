@@ -50,11 +50,16 @@ class NumbersViewController: UIViewController {
         textField.text += buttonTitle
         currentText = textField.text
         print(currentText ?? "N/A")
-        
     }
     
+    @IBAction func spaceButtonTapped() {
+        textField.text += " "
+        currentText = textField.text
+    }
     
-    
-    
+    @IBAction func deleteButtonTapped() {
+        textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
+        currentText = textField.text
+    }
     
 }

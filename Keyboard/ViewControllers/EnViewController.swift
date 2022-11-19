@@ -7,13 +7,13 @@
 
 import UIKit
 
-class USViewController: UIViewController {
+class EnViewController: UIViewController {
 
     @IBOutlet var textField: UITextView!
     @IBOutlet var keyboard: UIView!
     @IBOutlet var shiftButton: UIButton!
     
-    @IBOutlet var usKeysCollection: [UIButton]!
+    @IBOutlet var enKeysCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
     let keys: [Character] = Keys().usKeys
@@ -28,9 +28,9 @@ class USViewController: UIViewController {
         textField.layer.cornerRadius = 10
         keyboard.layer.cornerRadius = 10
         
-        usKeysCollection.forEach {
+        enKeysCollection.forEach {
             $0.layer.cornerRadius = 5
-            guard let keyIndex = usKeysCollection.firstIndex(of: $0) else { return }
+            guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
             $0.setTitle(String(keys[keyIndex]).uppercased(), for: .normal)
         }
         
@@ -56,8 +56,8 @@ class USViewController: UIViewController {
         textField.text += buttonTitle
         currentText = textField.text
         
-        usKeysCollection.forEach {
-            guard let keyIndex = usKeysCollection.firstIndex(of: $0) else { return }
+        enKeysCollection.forEach {
+            guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
             $0.setTitle(String(keys[keyIndex]), for: .normal)
         }
         
@@ -87,8 +87,8 @@ class USViewController: UIViewController {
         case true:
             guard let shiftImage = UIImage(systemName: "shift") else { return }
             shiftButton.setImage(shiftImage, for: .normal)
-            usKeysCollection.forEach {
-                guard let keyIndex = usKeysCollection.firstIndex(of: $0) else { return }
+            enKeysCollection.forEach {
+                guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
                 $0.setTitle(
                     String(keys[keyIndex]),
                     for: .normal)
@@ -97,8 +97,8 @@ class USViewController: UIViewController {
         case false:
             guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
             shiftButton.setImage(shiftImage, for: .normal)
-            usKeysCollection.forEach {
-                guard let keyIndex = usKeysCollection.firstIndex(of: $0) else { return }
+            enKeysCollection.forEach {
+                guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
                 $0.setTitle(
                     String(keys[keyIndex]).uppercased(),
                     for: .normal)
@@ -108,7 +108,7 @@ class USViewController: UIViewController {
 }
 
 // MARK: - extension
-extension USViewController {
+extension EnViewController {
     private func drawLayout() {
         
     }
