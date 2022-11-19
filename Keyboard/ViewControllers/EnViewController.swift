@@ -112,13 +112,3 @@ class EnViewController: UIViewController {
     }
     
 }
-
-// MARK: - extension
-extension EnViewController {
-    private func drawLayout() {
-        
-    }
-    
-}
-    
-    
