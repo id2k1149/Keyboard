@@ -77,10 +77,12 @@ class NumbersViewController: UIViewController {
     }
     
     @IBAction func globeButtonTapped() {
+        currentText = textField.text
         performSegue(withIdentifier: "ruNavController", sender: nil)
     }
     
     @IBAction func symbolsButtonTapped() {
+        currentText = textField.text
         guard let currentSymbolsButtonTitle = symbolsButton.currentTitle else { return }
         
         switch currentSymbolsButtonTitle {

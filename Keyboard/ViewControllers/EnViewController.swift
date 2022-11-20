@@ -52,7 +52,6 @@ class EnViewController: UIViewController {
     @IBAction func keyButtonTaped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
-        currentText = textField.text
         
         enKeysCollection.forEach {
             guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
@@ -76,6 +75,7 @@ class EnViewController: UIViewController {
     }
     
     @IBAction func shiftButtonTapped() {
+        currentText = textField.text
         guard let currentShiftImage = shiftButton.currentImage else { return }
         guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
         
@@ -109,13 +109,14 @@ class EnViewController: UIViewController {
     }
     
     @IBAction func numbersButtonTapped() {
-        performSegue(withIdentifier: "numbersNavController",
-                     sender: nil)
+        currentText = textField.text
+        performSegue(withIdentifier: "numbersNavController", sender: nil)
     }
     
     @IBAction func globeButtonTapped() {
-        performSegue(withIdentifier: "ruNavController",
-                     sender: nil)
+        currentText = textField.text
+        performSegue(withIdentifier: "ruNavController", sender: nil)
+        
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {

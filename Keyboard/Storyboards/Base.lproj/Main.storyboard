@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71z-NC-AIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="-24"/>
+            <point key="canvasLocation" x="1530" y="-24"/>
         </scene>
         <!--EN View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -560,16 +560,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zQw-qp-jbL">
-                                <rect key="frame" x="16" y="64" width="382" height="363"/>
+                                <rect key="frame" x="16" y="64" width="382" height="389"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contributors to the project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6H-lr-zpD">
-                                        <rect key="frame" x="50" y="0.0" width="282" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6H-lr-zpD">
+                                        <rect key="frame" x="117.66666666666666" y="0.0" width="146.99999999999997" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="created by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGj-Q9-hD1">
+                                        <rect key="frame" x="154.66666666666666" y="50" width="73" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="lGC-Gc-yLu">
-                                        <rect key="frame" x="56.666666666666686" y="50" width="269" height="55"/>
+                                        <rect key="frame" x="56.666666666666686" y="88" width="269" height="55"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0WC-ki-Umb">
                                                 <rect key="frame" x="0.0" y="0.0" width="269" height="23"/>
@@ -581,7 +587,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="GitHub-Mark-32px" translatesAutoresizingMaskIntoConstraints="NO" id="5v2-uT-RGy">
-                                                        <rect key="frame" x="15" y="3.6666666666666714" width="16" height="16"/>
+                                                        <rect key="frame" x="15" y="3.6666666666666572" width="16" height="16"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="16" id="JoH-7u-FMR"/>
                                                             <constraint firstAttribute="width" constant="16" id="wrJ-WT-eqj"/>
@@ -621,14 +627,14 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Used concepts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXk-n7-Sxc">
-                                        <rect key="frame" x="110.00000000000001" y="125" width="162.33333333333337" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="using concepts of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXk-n7-Sxc">
+                                        <rect key="frame" x="130" y="163" width="122.33333333333331" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G9K-B2-bgs">
-                                        <rect key="frame" x="38" y="175" width="306.33333333333331" height="188"/>
+                                        <rect key="frame" x="38" y="201" width="306.33333333333331" height="188"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. MVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcx-uK-km5">
                                                 <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="23"/>
@@ -683,7 +689,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZR-Sj-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295" y="2547"/>
+            <point key="canvasLocation" x="2294" y="2380"/>
         </scene>
         <!--Numbers Navigation Controller-->
         <scene sceneID="X4v-fa-iMV">
@@ -702,7 +708,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnE-JB-0Hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="832"/>
+            <point key="canvasLocation" x="1529" y="782"/>
         </scene>
         <!--Numbers View Controller-->
         <scene sceneID="hBS-0Z-mXL">
@@ -1216,7 +1222,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbN-57-rHG" sceneMemberID="firstResponder"/>
                 <exit id="l4B-hI-ja5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1766" y="1658"/>
+            <point key="canvasLocation" x="1529" y="1564"/>
         </scene>
         <!--RU Navigation Controller-->
         <scene sceneID="0v7-bw-iEM">
@@ -1234,7 +1240,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNP-Gg-6zM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2874" y="831"/>
+            <point key="canvasLocation" x="3041" y="782"/>
         </scene>
         <!--RU View Controller-->
         <scene sceneID="jmw-Gi-VQI">
@@ -1257,12 +1263,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pW-er-sXq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2873" y="1658"/>
+            <point key="canvasLocation" x="3041" y="1564"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lea-mj-EzP"/>
-        <segue reference="54m-5I-HaD"/>
+        <segue reference="WcC-Ox-aaE"/>
+        <segue reference="5HX-ao-Wg7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="GitHub-Mark-32px" width="32" height="32"/>
