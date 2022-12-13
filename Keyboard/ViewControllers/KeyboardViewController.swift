@@ -13,6 +13,7 @@ class KeyboardViewController: UIViewController {
     @IBOutlet var textField: UITextView!
     @IBOutlet var enStackView: UIStackView!
     @IBOutlet var numbersStackView: UIStackView!
+    @IBOutlet var ruStackView: UIStackView!
     
     @IBOutlet var shiftButton: UIButton!
     @IBOutlet var symbolsButton: UIButton!
@@ -26,6 +27,7 @@ class KeyboardViewController: UIViewController {
     let numbers = Keys.shared.numbersKeys
     let symbols = Keys.shared.symbolsKeys
     var currentText: String = TextField.shared.currentText
+    var currentLayout = layout.enKeys
     
     // MARK: override functions
     override func viewDidLoad() {
@@ -159,8 +161,8 @@ class KeyboardViewController: UIViewController {
             guard let keyIndex = collection.firstIndex(of: $0) else { return }
             
             switch collection {
-            case enKeysCollection:
-                $0.setTitle(String(enKeys[keyIndex]).uppercased(), for: .normal)
+            
+                
             case numbersKeysCollection:
                 if keys == numbers {
                     $0.setTitle(String(numbers[keyIndex]), for: .normal)
@@ -168,7 +170,7 @@ class KeyboardViewController: UIViewController {
                     $0.setTitle(String(symbols[keyIndex]), for: .normal)
                 }
             default:
-                print("place for ruKeyboard")
+                $0.setTitle(String(enKeys[keyIndex]).uppercased(), for: .normal)
             }
         
         }
@@ -192,7 +194,7 @@ extension KeyboardViewController {
         textField.layer.cornerRadius = 10
         
         // hide stacks
-        for stackView in [numbersStackView] {
+        for stackView in [numbersStackView, ruStackView] {
             stackView?.isHidden = true
         }
                 
