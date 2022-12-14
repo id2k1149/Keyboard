@@ -288,9 +288,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="m0r-rE-ig3" userLabel="Low Stack View">
                                         <rect key="frame" x="0.0" y="105.99999999999999" width="398" height="44.333333333333329"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uR5-Hc-Aup">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uR5-Hc-Aup" userLabel="ShiftEn">
                                                 <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="44.333333333333336"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="shift.fill" catalog="system">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -758,7 +758,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MlA-AW-JRU" userLabel="Low Stack View">
                                         <rect key="frame" x="0.0" y="107.66666666666664" width="398" height="44.666666666666671"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-DE-mvV" userLabel="Shift">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-DE-mvV" userLabel="ShiftRu">
                                                 <rect key="frame" x="0.0" y="0.0" width="32.666666666666664" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -766,7 +766,6 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="keyButtonTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jiG-WS-8bC"/>
                                                     <action selector="shiftButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1o-c6-WVw"/>
                                                 </connections>
                                             </button>
@@ -898,6 +897,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZu-bM-6l8">
                                                 <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="123">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -918,8 +918,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ml-7m-D7U">
                                                 <rect key="frame" x="125" y="0.0" width="189" height="44.666666666666664"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="space">
+                                                <state key="normal" title="Пробел">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -933,7 +934,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="qSW-H3-9xm"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="return.right" catalog="system">
+                                                <state key="normal" title="Ввод">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -1412,8 +1413,9 @@
                         <outlet property="enStackView" destination="F1H-HR-kvE" id="8ex-Gf-TSN"/>
                         <outlet property="numbersStackView" destination="TP9-fD-O5r" id="xIr-MZ-9TN"/>
                         <outlet property="ruStackView" destination="DxZ-e8-qBm" id="yBK-H8-6eM"/>
-                        <outlet property="shiftButton" destination="UgJ-DE-mvV" id="EqN-xk-Fsp"/>
-                        <outlet property="symbolsButton" destination="hl3-Ll-4SU" id="6DZ-oA-uY0"/>
+                        <outlet property="shiftEnButton" destination="uR5-Hc-Aup" id="KOq-rc-tzA"/>
+                        <outlet property="shiftRuButton" destination="UgJ-DE-mvV" id="Gvn-0J-0nQ"/>
+                        <outlet property="symbolsButton" destination="hl3-Ll-4SU" id="Chm-ef-lsY"/>
                         <outlet property="textField" destination="fnO-te-vwj" id="RxR-yP-KGm"/>
                         <outletCollection property="iconsCollection" destination="rIB-aV-FeY" collectionClass="NSMutableArray" id="h4r-V0-RAy"/>
                         <outletCollection property="iconsCollection" destination="Lop-hn-sNQ" collectionClass="NSMutableArray" id="RqH-Q1-AVk"/>
@@ -1667,7 +1669,6 @@
         <image name="delete.backward" catalog="system" width="128" height="102"/>
         <image name="delete.left" catalog="system" width="128" height="102"/>
         <image name="globe" catalog="system" width="128" height="123"/>
-        <image name="return.right" catalog="system" width="128" height="102"/>
         <image name="shift.fill" catalog="system" width="128" height="106"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
