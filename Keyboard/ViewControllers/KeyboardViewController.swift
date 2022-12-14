@@ -193,7 +193,7 @@ class KeyboardViewController: UIViewController {
                                       for: numbers)
         }
         
-        symbolsButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        symbolsButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
     }
     
     
