@@ -23,6 +23,9 @@ class KeyboardViewController: UIViewController {
     @IBOutlet var numbersKeysCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     @IBOutlet var ruKeysCollection: [UIButton]!
+    @IBOutlet var abcButton: UIButton!
+    @IBOutlet var spaceButton: UIButton!
+    @IBOutlet var returnButton: UIButton!
     
     // MARK: variables and constants
     let enKeys = Keys.shared.enKeys
@@ -70,7 +73,6 @@ class KeyboardViewController: UIViewController {
                 shiftImage,
                 for: .normal)
         }
-        
     }
     
     @IBAction func spaceButtonTapped() {
@@ -158,6 +160,17 @@ class KeyboardViewController: UIViewController {
         
         numbersStackView.isHidden = false
         
+        switch currentLayout {
+        case .enKeys:
+            abcButton.setTitle("ABC", for: .normal)
+            spaceButton.setTitle("space", for: .normal)
+            returnButton.setTitle("return", for: .normal)
+        case .ruKeys:
+            abcButton.setTitle("АБВ", for: .normal)
+            spaceButton.setTitle("Пробел", for: .normal)
+            returnButton.setTitle("Ввод", for: .normal)
+        }
+        
         setupKeysCollectionCorners(collection: numbersKeysCollection)
         setupKeysCollectionTitles(collection: numbersKeysCollection, for: numbers)
         setupIconsCollection()
@@ -179,7 +192,7 @@ class KeyboardViewController: UIViewController {
                                       for: numbers)
         }
         
-        symbolsButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        symbolsButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
     }
     
     

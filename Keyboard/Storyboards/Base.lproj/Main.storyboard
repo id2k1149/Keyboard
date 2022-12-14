@@ -1410,11 +1410,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="abcButton" destination="aC0-OI-7jK" id="HnT-wJ-aGw"/>
                         <outlet property="enStackView" destination="F1H-HR-kvE" id="8ex-Gf-TSN"/>
                         <outlet property="numbersStackView" destination="TP9-fD-O5r" id="xIr-MZ-9TN"/>
+                        <outlet property="returnButton" destination="m34-Yj-Fsh" id="zLH-nR-T6W"/>
                         <outlet property="ruStackView" destination="DxZ-e8-qBm" id="yBK-H8-6eM"/>
                         <outlet property="shiftEnButton" destination="uR5-Hc-Aup" id="KOq-rc-tzA"/>
                         <outlet property="shiftRuButton" destination="UgJ-DE-mvV" id="Gvn-0J-0nQ"/>
+                        <outlet property="spaceButton" destination="GLS-nW-4fR" id="A6a-Cx-ciP"/>
                         <outlet property="symbolsButton" destination="hl3-Ll-4SU" id="Chm-ef-lsY"/>
                         <outlet property="textField" destination="fnO-te-vwj" id="RxR-yP-KGm"/>
                         <outletCollection property="iconsCollection" destination="rIB-aV-FeY" collectionClass="NSMutableArray" id="h4r-V0-RAy"/>
