@@ -52,15 +52,20 @@ class KeyboardViewController: UIViewController {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
         
-        switch currentLayout {
+        switch currentLayout  {
         case .enKeys:
+            print("en")
+            guard let currentShiftImage = shiftEnButton.currentImage else { return }
+            print(currentShiftImage)
+            guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
             
-            if shiftIsOn {
+            if shiftIsOn && currentShiftImage.isEqual(shiftFillImage) {
                 enKeysCollection.forEach {
                     guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(String(enKeys[keyIndex].uppercased()), for: .normal)
                 }
             } else {
+                shiftIsOn = false
                 enKeysCollection.forEach {
                     guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(String(enKeys[keyIndex]), for: .normal)
@@ -74,13 +79,18 @@ class KeyboardViewController: UIViewController {
             }
             
         case .ruKeys:
+            print("ru")
+            guard let currentShiftImage = shiftRuButton.currentImage else { return }
+            print(currentShiftImage)
+            guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
             
-            if shiftIsOn {
+            if shiftIsOn && currentShiftImage.isEqual(shiftFillImage) {
                 ruKeysCollection.forEach {
                     guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(String(ruKeys[keyIndex].uppercased()), for: .normal)
                 }
             } else {
+                shiftIsOn = false
                 ruKeysCollection.forEach {
                     guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(String(ruKeys[keyIndex]), for: .normal)
@@ -111,9 +121,11 @@ class KeyboardViewController: UIViewController {
         
         switch currentLayout {
         case .enKeys:
+            print(shiftIsOn)
             guard let shiftImage = UIImage(systemName: "shift") else { return }
             shiftEnButton.setImage(shiftImage, for: .normal)
         case .ruKeys:
+            print(shiftIsOn)
             guard let shiftImage = UIImage(systemName: "shift") else { return }
             shiftRuButton.setImage(shiftImage, for: .normal)
         }
@@ -122,9 +134,7 @@ class KeyboardViewController: UIViewController {
     @IBAction func shiftButtonTapped() {
         currentText = textField.text
         
-//        if shiftIsOn {
-//            shiftIsOn = false
-//        }
+        print("shiftButtonTapped")
         
         switch currentLayout {
         case .enKeys:
