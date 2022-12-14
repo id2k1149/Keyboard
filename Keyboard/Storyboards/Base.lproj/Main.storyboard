@@ -296,6 +296,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="shiftButtonDoubleTapped:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="H7i-Ue-uUK"/>
                                                     <action selector="shiftButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ah8-mI-jYr"/>
                                                 </connections>
                                             </button>

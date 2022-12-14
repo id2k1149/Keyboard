@@ -34,6 +34,7 @@ class KeyboardViewController: UIViewController {
     let symbols = Keys.shared.symbolsKeys
     var currentText: String = TextField.shared.currentText
     var currentLayout: layout = .enKeys
+    var shiftIsOn = false
     
     // MARK: override functions
     override func viewDidLoad() {
@@ -53,15 +54,25 @@ class KeyboardViewController: UIViewController {
         
         switch currentLayout {
         case .enKeys:
-            enKeysCollection.forEach {
-                guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
-                $0.setTitle(String(enKeys[keyIndex]), for: .normal)
+            
+            if shiftIsOn {
+                enKeysCollection.forEach {
+                    guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
+                    $0.setTitle(String(enKeys[keyIndex].uppercased()), for: .normal)
+                }
+            } else {
+                enKeysCollection.forEach {
+                    guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
+                    $0.setTitle(String(enKeys[keyIndex]), for: .normal)
+                }
+                
+                guard let shiftImage = UIImage(systemName: "shift") else { return }
+                shiftEnButton.setImage(
+                    shiftImage,
+                    for: .normal)
+                
             }
             
-            guard let shiftImage = UIImage(systemName: "shift") else { return }
-            shiftEnButton.setImage(
-                shiftImage,
-                for: .normal)
         case .ruKeys:
             ruKeysCollection.forEach {
                 guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
@@ -83,6 +94,37 @@ class KeyboardViewController: UIViewController {
     @IBAction func deleteButtonTapped() {
         textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
         currentText = textField.text
+    }
+    
+    @IBAction func shiftButtonDoubleTapped(_ sender: UIButton) {
+        print("DoubleTapped")
+        shiftIsOn = true
+        
+        switch currentLayout {
+        case .enKeys:
+            print("en")
+            guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
+            shiftEnButton.setImage(shiftImage, for: .normal)
+            
+            enKeysCollection.forEach {
+                guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
+                $0.setTitle(
+                    String(enKeys[keyIndex].uppercased()),
+                    for: .normal)
+            }
+            
+        case .ruKeys:
+            guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
+            shiftRuButton.setImage(shiftImage, for: .normal)
+            
+            ruKeysCollection.forEach {
+                guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
+                $0.setTitle(
+                    String(ruKeys[keyIndex].uppercased()),
+                    for: .normal)
+            }
+        }
+        
     }
     
     @IBAction func shiftButtonTapped() {
