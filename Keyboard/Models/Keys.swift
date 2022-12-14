@@ -40,6 +40,4 @@ class Keys {
 enum layout {
     case enKeys
     case ruKeys
-    case numbers
-    case symbols
 }

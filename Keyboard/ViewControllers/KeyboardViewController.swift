@@ -21,13 +21,15 @@ class KeyboardViewController: UIViewController {
     @IBOutlet var enKeysCollection: [UIButton]!
     @IBOutlet var numbersKeysCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
+    @IBOutlet var ruKeysCollection: [UIButton]!
     
     // MARK: variables and constants
     let enKeys = Keys.shared.enKeys
+    let ruKeys = Keys.shared.ruKeys
     let numbers = Keys.shared.numbersKeys
     let symbols = Keys.shared.symbolsKeys
     var currentText: String = TextField.shared.currentText
-    var currentLayout = layout.enKeys
+    var currentLayout: layout = .enKeys
     
     // MARK: override functions
     override func viewDidLoad() {
@@ -45,15 +47,29 @@ class KeyboardViewController: UIViewController {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
         
-        enKeysCollection.forEach {
-            guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
-            $0.setTitle(String(enKeys[keyIndex]), for: .normal)
+        switch currentLayout {
+        case .enKeys:
+            enKeysCollection.forEach {
+                guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
+                $0.setTitle(String(enKeys[keyIndex]), for: .normal)
+            }
+            
+            guard let shiftImage = UIImage(systemName: "shift") else { return }
+            shiftButton.setImage(
+                shiftImage,
+                for: .normal)
+        case .ruKeys:
+            ruKeysCollection.forEach {
+                guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
+                $0.setTitle(String(ruKeys[keyIndex]), for: .normal)
+            }
+            
+            guard let shiftImage = UIImage(systemName: "shift") else { return }
+            shiftButton.setImage(
+                shiftImage,
+                for: .normal)
         }
         
-        guard let shiftImage = UIImage(systemName: "shift") else { return }
-        shiftButton.setImage(
-            shiftImage,
-            for: .normal)
     }
     
     @IBAction func spaceButtonTapped() {
@@ -76,21 +92,44 @@ class KeyboardViewController: UIViewController {
         case true:
             guard let shiftImage = UIImage(systemName: "shift") else { return }
             shiftButton.setImage(shiftImage, for: .normal)
-            enKeysCollection.forEach {
-                guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
-                $0.setTitle(
-                    String(enKeys[keyIndex]),
-                    for: .normal)
+            
+            switch currentLayout {
+            case .enKeys:
+                enKeysCollection.forEach {
+                    guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
+                    $0.setTitle(
+                        String(enKeys[keyIndex]),
+                        for: .normal)
+                }
+            case .ruKeys:
+                ruKeysCollection.forEach {
+                    guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
+                    $0.setTitle(
+                        String(ruKeys[keyIndex]),
+                        for: .normal)
+                }
             }
+            
             
         case false:
             guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
             shiftButton.setImage(shiftImage, for: .normal)
-            enKeysCollection.forEach {
-                guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
-                $0.setTitle(
-                    String(enKeys[keyIndex]).uppercased(),
-                    for: .normal)
+            
+            switch currentLayout {
+            case .enKeys:
+                enKeysCollection.forEach {
+                    guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
+                    $0.setTitle(
+                        String(enKeys[keyIndex].uppercased()),
+                        for: .normal)
+                }
+            case .ruKeys:
+                ruKeysCollection.forEach {
+                    guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
+                    $0.setTitle(
+                        String(ruKeys[keyIndex].uppercased()),
+                        for: .normal)
+                }
             }
         }
     }
@@ -102,7 +141,7 @@ class KeyboardViewController: UIViewController {
     
     @IBAction func numbersButtonTapped() {
         // hide stacks
-        for stackView in [enStackView] {
+        for stackView in [enStackView, ruStackView] {
             stackView?.isHidden = true
         }
         
