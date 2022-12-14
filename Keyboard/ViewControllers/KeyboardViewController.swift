@@ -173,6 +173,7 @@ class KeyboardViewController: UIViewController {
         
         setupKeysCollectionCorners(collection: numbersKeysCollection)
         setupKeysCollectionTitles(collection: numbersKeysCollection, for: numbers)
+        symbolsButton.setTitle("#+=", for: .normal)
         setupIconsCollection()
     }
     
@@ -198,18 +199,32 @@ class KeyboardViewController: UIViewController {
     
     @IBAction func abcButtonTapped() {
         // hide stacks
-        for stackView in [numbersStackView] {
-            stackView?.isHidden = true
+        numbersStackView.isHidden = true
+        
+        guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
+        
+        switch currentLayout {
+        case .enKeys:
+            enStackView.isHidden = false
+            setupKeysCollectionCorners(collection: enKeysCollection)
+            setupKeysCollectionTitles(collection: enKeysCollection, for: enKeys)
+            
+            shiftEnButton.setImage(shiftImage, for: .normal)
+            
+        case .ruKeys:
+            ruStackView.isHidden = false
+            setupKeysCollectionCorners(collection: ruKeysCollection)
+            setupKeysCollectionTitles(collection: ruKeysCollection, for: ruKeys)
+            
+            shiftRuButton.setImage(shiftImage, for: .normal)
         }
         
-        enStackView.isHidden = false
-        
-        setupKeysCollectionCorners(collection: enKeysCollection)
-        setupKeysCollectionTitles(collection: enKeysCollection, for: enKeys)
         setupIconsCollection()
     }
     
     @IBAction func globeButtonTapped() {
+        guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
+        
         switch currentLayout {
             
         case .enKeys:
@@ -217,11 +232,12 @@ class KeyboardViewController: UIViewController {
             for stackView in [numbersStackView, enStackView] {
                 stackView?.isHidden = true
             }
+            
             ruStackView.isHidden = false
             
             setupKeysCollectionCorners(collection: ruKeysCollection)
             setupKeysCollectionTitles(collection: ruKeysCollection, for: ruKeys)
-            setupIconsCollection()
+            shiftEnButton.setImage(shiftImage, for: .normal)
             
             currentLayout = .ruKeys
         case .ruKeys:
@@ -229,16 +245,18 @@ class KeyboardViewController: UIViewController {
             for stackView in [numbersStackView, ruStackView] {
                 stackView?.isHidden = true
             }
+            
             enStackView.isHidden = false
             
             setupKeysCollectionCorners(collection: enKeysCollection)
             setupKeysCollectionTitles(collection: enKeysCollection, for: enKeys)
-            setupIconsCollection()
+            
+            shiftRuButton.setImage(shiftImage, for: .normal)
             
             currentLayout = .enKeys
         }
         
-        
+        setupIconsCollection()
     }
     
     // MARK: private methods
