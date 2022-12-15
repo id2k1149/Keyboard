@@ -54,9 +54,7 @@ class KeyboardViewController: UIViewController {
         
         switch currentLayout  {
         case .enKeys:
-            print("en")
             guard let currentShiftImage = shiftEnButton.currentImage else { return }
-            print(currentShiftImage)
             guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
             
             if shiftIsOn && currentShiftImage.isEqual(shiftFillImage) {
@@ -79,9 +77,7 @@ class KeyboardViewController: UIViewController {
             }
             
         case .ruKeys:
-            print("ru")
             guard let currentShiftImage = shiftRuButton.currentImage else { return }
-            print(currentShiftImage)
             guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
             
             if shiftIsOn && currentShiftImage.isEqual(shiftFillImage) {
@@ -115,26 +111,20 @@ class KeyboardViewController: UIViewController {
         currentText = textField.text
     }
     
-    @IBAction func shiftButtonDoubleTapped(_ sender: UIButton) {
-        print("DoubleTapped")
+    @IBAction func shiftEnDoubleTap(_ sender: UIButton) {
         shiftIsOn = true
-        
-        switch currentLayout {
-        case .enKeys:
-            print(shiftIsOn)
-            guard let shiftImage = UIImage(systemName: "shift") else { return }
-            shiftEnButton.setImage(shiftImage, for: .normal)
-        case .ruKeys:
-            print(shiftIsOn)
-            guard let shiftImage = UIImage(systemName: "shift") else { return }
-            shiftRuButton.setImage(shiftImage, for: .normal)
-        }
+        guard let shiftImage = UIImage(systemName: "shift") else { return }
+        shiftEnButton.setImage(shiftImage, for: .normal)
+    }
+    
+    @IBAction func shiftRuDoubleTap(_ sender: Any) {
+        shiftIsOn = true
+        guard let shiftImage = UIImage(systemName: "shift") else { return }
+        shiftRuButton.setImage(shiftImage, for: .normal)
     }
     
     @IBAction func shiftButtonTapped() {
         currentText = textField.text
-        
-        print("shiftButtonTapped")
         
         switch currentLayout {
         case .enKeys:
