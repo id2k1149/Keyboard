@@ -20,6 +20,7 @@ class KeyboardViewController: UIViewController {
     @IBOutlet var enKeysCollection: [UIButton]!
     @IBOutlet var numbersKeysCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
+    //ghfhhfhh
     
     // MARK: variables and constants
     let enKeys = Keys.shared.enKeys
