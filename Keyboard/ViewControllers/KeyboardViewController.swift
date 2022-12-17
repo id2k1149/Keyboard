@@ -17,48 +17,46 @@ class KeyboardViewController: UIViewController {
     @IBOutlet var oneAndTwoStringStackView: UIStackView!
     @IBOutlet var ruStackView: UIStackView!
     
+    
     @IBOutlet var ruButtenColection: [UIButton]!
     @IBOutlet var enButtenColection: [UIButton]!
-    
-    @IBOutlet var shiftButton: UIButton!
-    @IBOutlet var symbolsButton: UIButton!
-    
-    @IBOutlet var enKeysCollection: [UIButton]!
-    @IBOutlet var ruKeysCollection: [UIButton]!
     @IBOutlet var numbersKeysCollection: [UIButton]!
     @IBOutlet var iconsCollection: [UIButton]!
     
+  
+    @IBOutlet var shiftButten: UIButton!
+    @IBOutlet var symbolsButton: UIButton!
+    
+    
     
     //    // MARK: variables and constants
-    //    let enKeys = Keys.shared.enKeys
-    //    let numbers = Keys.shared.numbersKeys
-    //    let symbols = Keys.shared.symbolsKeys
-    //    var currentText: String = TextField.shared.currentText
+
+    
+    
     
     // MARK: override functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupKeysCollectionCorners(collection: ruKeysCollection)
-        setupKeysCollectionCorners(collection: enKeysCollection)
+        setupKeysCollectionCorners(collection: ruButtenColection)
+        setupKeysCollectionCorners(collection: enButtenColection)
         setupKeysCollectionCorners(collection: iconsCollection)
         setupKeysCollectionCorners(collection: numbersKeysCollection)
         updateUI()
     }
-    
-    //    override func viewDidAppear(_ animated: Bool) {
-    //        // to add focus to textField
-    //        textField.becomeFirstResponder()
-    //    }
+
     
     // MARK: IBAction
     @IBAction func keyButtonTaped(_ sender: UIButton) {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
+       lowRegister()
     }
+    
     
     @IBAction func spaceButtonTapped() {
         textField.text += " "
     }
+    
     
     @IBAction func deleteButtonTapped() {
         if !textField.text.isEmpty {
@@ -68,35 +66,16 @@ class KeyboardViewController: UIViewController {
         }
     }
     
+    
     @IBAction func shiftButtonTapped() {
-        
-        guard  let currentShiftImage = shiftButton.currentImage else { return }
-        guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
-        
-        if currentShiftImage == shiftFillImage {
-            shiftButton.setImage(UIImage(systemName: "shift"), for: .normal)
-            enButtenColection.forEach { button in
-                button.setTitle(button.titleLabel?.text?.lowercased(), for: .normal)
-            }
-            ruButtenColection.forEach { button in
-                button.setTitle(button.titleLabel?.text?.lowercased(), for: .normal)
-            }
-            
-        }  else {
-            shiftButton.setImage(UIImage(systemName: "shift.fill"), for: .normal)
-            enButtenColection.forEach { button in
-                button.setTitle(button.titleLabel?.text?.uppercased(), for: .normal)
-            }
-            ruButtenColection.forEach { button in
-                button.setTitle(button.titleLabel?.text?.uppercased(), for: .normal)
-            }
-        }
-        
+       settingRegister()
     }
+    
     
     @IBAction func returnButtonTapped() {
         textField.text += "\n"
     }
+    
     
     @IBAction func numbersButtonTapped() {
         numbersStackView.isHidden = false
@@ -107,6 +86,7 @@ class KeyboardViewController: UIViewController {
         
         setupKeysCollectionCorners(collection: numbersKeysCollection)
     }
+    
     
     @IBAction func symbolsButtonTapped() {
         oneAndTwoStringStackView.isHidden = true
@@ -146,6 +126,7 @@ class KeyboardViewController: UIViewController {
         }
     }
     
+    
     // MARK: private methods
     private func setupKeysCollectionCorners(collection: [UIButton]) {
         collection.forEach {
@@ -164,4 +145,38 @@ extension KeyboardViewController {
         enStackView.isHidden = true
         numbersStackView.isHidden = true
     }
-}
+    
+    private func lowRegister() {
+        shiftButten.setImage(UIImage(systemName: "shift"), for: .normal)
+        enButtenColection.forEach { button in
+            button.setTitle(button.titleLabel?.text?.lowercased(), for: .normal)
+        }
+        ruButtenColection.forEach { button in
+            button.setTitle(button.titleLabel?.text?.lowercased(), for: .normal)
+        }
+        }
+    
+    private func highRegister() {
+        shiftButten.setImage(UIImage(systemName: "shift.fill"), for: .normal)
+        enButtenColection.forEach { button in
+            button.setTitle(button.titleLabel?.text?.uppercased(), for: .normal)
+        }
+        ruButtenColection.forEach { button in
+            button.setTitle(button.titleLabel?.text?.uppercased(), for: .normal)
+        }
+        }
+    
+    private func settingRegister() {
+        
+        let currentShiftImage = shiftButten.currentImage
+        let shiftFillImage = UIImage(systemName: "shift.fill")
+        
+        if currentShiftImage == shiftFillImage {
+            lowRegister()
+        } else {
+            highRegister()
+        }
+    }
+    }
+
+
