@@ -34,7 +34,7 @@ class KeyboardViewController: UIViewController {
     let symbols = Keys.shared.symbolsKeys
     var currentText: String = TextField.shared.currentText
     var currentLayout: layout = .enKeys
-    var shiftIsOn = false
+    var capslockIsOn = false
     
     // MARK: override functions
     override func viewDidLoad() {
@@ -56,37 +56,39 @@ class KeyboardViewController: UIViewController {
         case .enKeys:
             guard let currentShiftImage = shiftEnButton.currentImage else { return }
             guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
+//            guard let capslockImage = UIImage(systemName: "capslock.fill") else { return }
             
-            if shiftIsOn && currentShiftImage.isEqual(shiftFillImage) {
+            switch capslockIsOn {
+            case true:
                 enKeysCollection.forEach {
                     guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(String(enKeys[keyIndex].uppercased()), for: .normal)
                 }
-            } else {
-                shiftIsOn = false
-                enKeysCollection.forEach {
-                    guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
-                    $0.setTitle(String(enKeys[keyIndex]), for: .normal)
+            case false:
+                if currentShiftImage.isEqual(shiftFillImage) {
+                    enKeysCollection.forEach {
+                        guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
+                        $0.setTitle(String(enKeys[keyIndex]), for: .normal)
+                    }
+                    
+                    guard let shiftImage = UIImage(systemName: "shift") else { return }
+                    shiftEnButton.setImage(
+                        shiftImage,
+                        for: .normal)
                 }
-                
-                guard let shiftImage = UIImage(systemName: "shift") else { return }
-                shiftEnButton.setImage(
-                    shiftImage,
-                    for: .normal)
-                
             }
             
         case .ruKeys:
             guard let currentShiftImage = shiftRuButton.currentImage else { return }
             guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
             
-            if shiftIsOn && currentShiftImage.isEqual(shiftFillImage) {
+            if capslockIsOn && currentShiftImage.isEqual(shiftFillImage) {
                 ruKeysCollection.forEach {
                     guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(String(ruKeys[keyIndex].uppercased()), for: .normal)
                 }
             } else {
-                shiftIsOn = false
+                capslockIsOn = false
                 ruKeysCollection.forEach {
                     guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(String(ruKeys[keyIndex]), for: .normal)
@@ -107,18 +109,22 @@ class KeyboardViewController: UIViewController {
     }
     
     @IBAction func deleteButtonTapped() {
-        textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
-        currentText = textField.text
+        if textField.hasText {
+            textField.text.remove(at: textField.text.index(before: textField.text.endIndex))
+            currentText = textField.text
+        } else {
+            return
+        }
     }
     
     @IBAction func shiftEnDoubleTap(_ sender: UIButton) {
-        shiftIsOn = true
+        capslockIsOn = true
         guard let shiftImage = UIImage(systemName: "shift") else { return }
         shiftEnButton.setImage(shiftImage, for: .normal)
     }
     
     @IBAction func shiftRuDoubleTap(_ sender: Any) {
-        shiftIsOn = true
+        capslockIsOn = true
         guard let shiftImage = UIImage(systemName: "shift") else { return }
         shiftRuButton.setImage(shiftImage, for: .normal)
     }
@@ -130,10 +136,10 @@ class KeyboardViewController: UIViewController {
         case .enKeys:
             guard let currentShiftImage = shiftEnButton.currentImage else { return }
             guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
+            guard let shiftImage = UIImage(systemName: "shift") else { return }
             
-            switch currentShiftImage.isEqual(shiftFillImage) {
-                
-            case true:
+            switch currentShiftImage {
+            case shiftFillImage:
                 guard let shiftImage = UIImage(systemName: "shift") else { return }
                 shiftEnButton.setImage(shiftImage, for: .normal)
                 enKeysCollection.forEach {
@@ -142,15 +148,31 @@ class KeyboardViewController: UIViewController {
                         String(enKeys[keyIndex]),
                         for: .normal)
                 }
-                
-            case false:
-                guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
-                shiftEnButton.setImage(shiftImage, for: .normal)
+            case shiftImage:
+                if capslockIsOn {
+                    guard let shiftImage = UIImage(systemName: "capslock.fill") else { return }
+                    shiftEnButton.setImage(shiftImage, for: .normal)
+                } else {
+                    guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
+                    shiftEnButton.setImage(shiftImage, for: .normal)
+                }
                 
                 enKeysCollection.forEach {
                     guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(
                         String(enKeys[keyIndex].uppercased()),
+                        for: .normal)
+                }
+            default:
+                capslockIsOn = false
+                
+                guard let shiftImage = UIImage(systemName: "shift") else { return }
+                shiftEnButton.setImage(shiftImage, for: .normal)
+                
+                enKeysCollection.forEach {
+                    guard let keyIndex = enKeysCollection.firstIndex(of: $0) else { return }
+                    $0.setTitle(
+                        String(enKeys[keyIndex]),
                         for: .normal)
                 }
             }
