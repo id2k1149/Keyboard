@@ -52,11 +52,11 @@ class KeyboardViewController: UIViewController {
         guard let buttonTitle = sender.currentTitle else {return}
         textField.text += buttonTitle
         
+        guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
+        
         switch currentLayout  {
         case .enKeys:
             guard let currentShiftImage = shiftEnButton.currentImage else { return }
-            guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
-//            guard let capslockImage = UIImage(systemName: "capslock.fill") else { return }
             
             switch capslockIsOn {
             case true:
@@ -80,25 +80,25 @@ class KeyboardViewController: UIViewController {
             
         case .ruKeys:
             guard let currentShiftImage = shiftRuButton.currentImage else { return }
-            guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
             
-            if capslockIsOn && currentShiftImage.isEqual(shiftFillImage) {
+            switch capslockIsOn {
+            case true:
                 ruKeysCollection.forEach {
                     guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(String(ruKeys[keyIndex].uppercased()), for: .normal)
                 }
-            } else {
-                capslockIsOn = false
-                ruKeysCollection.forEach {
-                    guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
-                    $0.setTitle(String(ruKeys[keyIndex]), for: .normal)
+            case false:
+                if currentShiftImage.isEqual(shiftFillImage) {
+                    ruKeysCollection.forEach {
+                        guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
+                        $0.setTitle(String(ruKeys[keyIndex]), for: .normal)
+                    }
+                    
+                    guard let shiftImage = UIImage(systemName: "shift") else { return }
+                    shiftRuButton.setImage(
+                        shiftImage,
+                        for: .normal)
                 }
-                
-                guard let shiftImage = UIImage(systemName: "shift") else { return }
-                shiftRuButton.setImage(
-                    shiftImage,
-                    for: .normal)
-                
             }
         }
     }
@@ -131,12 +131,12 @@ class KeyboardViewController: UIViewController {
     
     @IBAction func shiftButtonTapped() {
         currentText = textField.text
+        guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
+        guard let shiftImage = UIImage(systemName: "shift") else { return }
         
         switch currentLayout {
         case .enKeys:
             guard let currentShiftImage = shiftEnButton.currentImage else { return }
-            guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
-            guard let shiftImage = UIImage(systemName: "shift") else { return }
             
             switch currentShiftImage {
             case shiftFillImage:
@@ -179,28 +179,42 @@ class KeyboardViewController: UIViewController {
             
         case .ruKeys:
             guard let currentShiftImage = shiftRuButton.currentImage else { return }
-            guard let shiftFillImage = UIImage(systemName: "shift.fill") else { return }
             
-            switch currentShiftImage.isEqual(shiftFillImage) {
-                
-            case true:
+            switch currentShiftImage {
+            case shiftFillImage:
                 guard let shiftImage = UIImage(systemName: "shift") else { return }
                 shiftRuButton.setImage(shiftImage, for: .normal)
                 ruKeysCollection.forEach {
                     guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(
-                        String(ruKeys[keyIndex]),
+                        String(enKeys[keyIndex]),
                         for: .normal)
                 }
-                
-            case false:
-                guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
-                shiftRuButton.setImage(shiftImage, for: .normal)
+            case shiftImage:
+                if capslockIsOn {
+                    guard let shiftImage = UIImage(systemName: "capslock.fill") else { return }
+                    shiftRuButton.setImage(shiftImage, for: .normal)
+                } else {
+                    guard let shiftImage = UIImage(systemName: "shift.fill") else { return }
+                    shiftRuButton.setImage(shiftImage, for: .normal)
+                }
                 
                 ruKeysCollection.forEach {
                     guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
                     $0.setTitle(
                         String(ruKeys[keyIndex].uppercased()),
+                        for: .normal)
+                }
+            default:
+                capslockIsOn = false
+                
+                guard let shiftImage = UIImage(systemName: "shift") else { return }
+                shiftRuButton.setImage(shiftImage, for: .normal)
+                
+                ruKeysCollection.forEach {
+                    guard let keyIndex = ruKeysCollection.firstIndex(of: $0) else { return }
+                    $0.setTitle(
+                        String(ruKeys[keyIndex]),
                         for: .normal)
                 }
             }
