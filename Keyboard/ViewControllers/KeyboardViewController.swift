@@ -72,6 +72,17 @@ class KeyboardViewController: UIViewController {
     }
     
     
+    @IBAction func ShiftButtonTappedDown(_ sender: Any) {
+        shiftButten.setImage(UIImage(systemName: "capslock.fill"), for: .normal)
+        enButtenColection.forEach { button in
+            button.setTitle(button.titleLabel?.text?.uppercased(), for: .normal)
+        }
+        ruButtenColection.forEach { button in
+            button.setTitle(button.titleLabel?.text?.uppercased(), for: .normal)
+        }
+    }
+    
+    
     @IBAction func returnButtonTapped() {
         textField.text += "\n"
     }

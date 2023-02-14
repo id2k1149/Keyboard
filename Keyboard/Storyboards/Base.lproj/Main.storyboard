@@ -326,6 +326,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="shift.fill" catalog="system"/>
                                                 <connections>
+                                                    <action selector="ShiftButtonTappedDown:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="d7M-b4-NNO"/>
                                                     <action selector="shiftButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="qjo-YB-B1g"/>
                                                 </connections>
                                             </button>
@@ -940,16 +941,16 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="TP9-fD-O5r" userLabel="Numbers Stack View">
-                                <rect key="frame" x="16" y="687" width="382" height="189"/>
+                                <rect key="frame" x="16" y="593" width="382" height="283"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="8MB-44-cDL" userLabel="Symbols">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="90"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-Fp-nEO" userLabel="Symbols OneStack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="25.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="40.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZB-kG-IvR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -961,7 +962,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRE-sj-gDE">
-                                                        <rect key="frame" x="38.5" y="0.0" width="34" height="25.5"/>
+                                                        <rect key="frame" x="38.5" y="0.0" width="34" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -973,7 +974,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N26-QB-m5p">
-                                                        <rect key="frame" x="77.5" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="77.5" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -985,7 +986,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SJ-OH-4I1">
-                                                        <rect key="frame" x="116" y="0.0" width="34" height="25.5"/>
+                                                        <rect key="frame" x="116" y="0.0" width="34" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -997,7 +998,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-bX-29g">
-                                                        <rect key="frame" x="155" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="155" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1009,7 +1010,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2z-wr-uYx">
-                                                        <rect key="frame" x="193.5" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="193.5" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1021,7 +1022,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3S-1f-rE1">
-                                                        <rect key="frame" x="232" y="0.0" width="34" height="25.5"/>
+                                                        <rect key="frame" x="232" y="0.0" width="34" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1033,7 +1034,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f33-WJ-Tjw">
-                                                        <rect key="frame" x="271" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="271" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1045,7 +1046,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCF-lC-Wu1">
-                                                        <rect key="frame" x="309.5" y="0.0" width="34" height="25.5"/>
+                                                        <rect key="frame" x="309.5" y="0.0" width="34" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1057,7 +1058,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yff-cT-DG9">
-                                                        <rect key="frame" x="348.5" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="348.5" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1071,10 +1072,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bnz-lV-YCt" userLabel="Symbols Two Stack View">
-                                                <rect key="frame" x="0.0" y="34.5" width="382" height="25.5"/>
+                                                <rect key="frame" x="0.0" y="49.5" width="382" height="40.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6A4-5d-obe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="6A4-5d-obe" secondAttribute="height" multiplier="2.5:3" id="mKu-Wj-8aK"/>
@@ -1089,7 +1090,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHq-QZ-X8f">
-                                                        <rect key="frame" x="38.5" y="0.0" width="34" height="25.5"/>
+                                                        <rect key="frame" x="38.5" y="0.0" width="34" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1101,7 +1102,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INf-6C-XsU">
-                                                        <rect key="frame" x="77.5" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="77.5" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1113,7 +1114,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-YV-3d9">
-                                                        <rect key="frame" x="116" y="0.0" width="34" height="25.5"/>
+                                                        <rect key="frame" x="116" y="0.0" width="34" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1125,7 +1126,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-ob-0nT">
-                                                        <rect key="frame" x="155" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="155" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1137,7 +1138,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDm-N3-sDq">
-                                                        <rect key="frame" x="193.5" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="193.5" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1149,7 +1150,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-bG-HLX">
-                                                        <rect key="frame" x="232" y="0.0" width="34" height="25.5"/>
+                                                        <rect key="frame" x="232" y="0.0" width="34" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1161,7 +1162,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOT-IS-249">
-                                                        <rect key="frame" x="271" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="271" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1173,7 +1174,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-yW-9hd">
-                                                        <rect key="frame" x="309.5" y="0.0" width="34" height="25.5"/>
+                                                        <rect key="frame" x="309.5" y="0.0" width="34" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1185,7 +1186,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlM-0O-5Jp">
-                                                        <rect key="frame" x="348.5" y="0.0" width="33.5" height="25.5"/>
+                                                        <rect key="frame" x="348.5" y="0.0" width="33.5" height="40.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1201,7 +1202,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-K3-4Kx" userLabel="One and two string number key">
-                                        <rect key="frame" x="0.0" y="69" width="382" height="90"/>
+                                        <rect key="frame" x="0.0" y="99" width="382" height="90"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mzS-wS-Cbb" userLabel="Upper Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40.5"/>
@@ -1459,10 +1460,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-lS-i3C" userLabel="Low Stack View">
-                                        <rect key="frame" x="0.0" y="168" width="382" height="12"/>
+                                        <rect key="frame" x="0.0" y="198" width="382" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hl3-Ll-4SU">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="12"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1474,10 +1475,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2bY-T2-9aA" userLabel="Low Letters Stack View">
-                                                <rect key="frame" x="42" y="0.0" width="298" height="12"/>
+                                                <rect key="frame" x="42" y="0.0" width="298" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFW-8d-bBI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="12"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1489,7 +1490,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-pO-yYp">
-                                                        <rect key="frame" x="60.5" y="0.0" width="55.5" height="12"/>
+                                                        <rect key="frame" x="60.5" y="0.0" width="55.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1501,7 +1502,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWa-CD-EdU">
-                                                        <rect key="frame" x="121" y="0.0" width="56" height="12"/>
+                                                        <rect key="frame" x="121" y="0.0" width="56" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1513,7 +1514,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txb-8M-aaZ">
-                                                        <rect key="frame" x="182" y="0.0" width="55.5" height="12"/>
+                                                        <rect key="frame" x="182" y="0.0" width="55.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1525,7 +1526,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-aM-Wyo">
-                                                        <rect key="frame" x="242.5" y="0.0" width="55.5" height="12"/>
+                                                        <rect key="frame" x="242.5" y="0.0" width="55.5" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1539,7 +1540,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-0W-2rg">
-                                                <rect key="frame" x="352" y="0.0" width="30" height="12"/>
+                                                <rect key="frame" x="352" y="0.0" width="30" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="delete.backward" catalog="system">
@@ -1555,10 +1556,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rrV-cG-baN" userLabel="Space Stack View">
-                                        <rect key="frame" x="0.0" y="189" width="382" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="247" width="382" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aC0-OI-7jK">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="ABC">
@@ -1569,7 +1570,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZi-qq-bp6">
-                                                <rect key="frame" x="34" y="0.0" width="30" height="0.0"/>
+                                                <rect key="frame" x="34" y="0.0" width="30" height="36"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="globe" catalog="system"/>
@@ -1578,7 +1579,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLS-nW-4fR">
-                                                <rect key="frame" x="68" y="0.0" width="230" height="0.0"/>
+                                                <rect key="frame" x="68" y="0.0" width="230" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="MPV-1n-8K3"/>
@@ -1592,7 +1593,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m34-Yj-Fsh">
-                                                <rect key="frame" x="302" y="0.0" width="80" height="0.0"/>
+                                                <rect key="frame" x="302" y="0.0" width="80" height="36"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="xma-O3-qLg"/>
@@ -1628,27 +1629,21 @@
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="F1H-HR-kvE" secondAttribute="trailing" constant="16" id="1wB-q1-EJ6"/>
-                            <constraint firstItem="TP9-fD-O5r" firstAttribute="top" secondItem="fnO-te-vwj" secondAttribute="bottom" constant="8" id="3fo-ft-f9b"/>
                             <constraint firstItem="n34-f8-T59" firstAttribute="height" relation="lessThanOrEqual" secondItem="fnO-te-vwj" secondAttribute="height" multiplier="0.404255" id="AEU-d4-5ra"/>
-                            <constraint firstAttribute="trailing" secondItem="TP9-fD-O5r" secondAttribute="trailing" constant="16" id="AbM-s4-ZGG"/>
                             <constraint firstAttribute="bottom" secondItem="F1H-HR-kvE" secondAttribute="bottom" constant="20" id="DWf-fB-H5N"/>
                             <constraint firstItem="n34-f8-T59" firstAttribute="top" secondItem="fnO-te-vwj" secondAttribute="bottom" constant="8" id="Edg-sj-IT7"/>
                             <constraint firstItem="fnO-te-vwj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SXo-16-5Ic"/>
-                            <constraint firstAttribute="bottom" secondItem="TP9-fD-O5r" secondAttribute="bottom" constant="20" id="W7j-dD-qfT"/>
                             <constraint firstAttribute="trailing" secondItem="n34-f8-T59" secondAttribute="trailing" constant="16" id="YFm-JR-lsX"/>
-                            <constraint firstItem="TP9-fD-O5r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ct2-Tn-SU7"/>
+                            <constraint firstAttribute="bottom" secondItem="TP9-fD-O5r" secondAttribute="bottom" constant="20" id="cdd-EC-jZ6"/>
+                            <constraint firstItem="TP9-fD-O5r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dds-8C-ghd"/>
                             <constraint firstItem="fnO-te-vwj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="i85-J9-NUa"/>
                             <constraint firstItem="n34-f8-T59" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l0R-zI-9J4"/>
                             <constraint firstItem="F1H-HR-kvE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="meF-P6-8ae"/>
                             <constraint firstItem="F1H-HR-kvE" firstAttribute="top" secondItem="fnO-te-vwj" secondAttribute="bottom" constant="8" id="riM-TO-ILF"/>
                             <constraint firstAttribute="bottom" secondItem="n34-f8-T59" secondAttribute="bottom" constant="20" id="wO5-Wh-x66"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TP9-fD-O5r" secondAttribute="trailing" constant="16" id="x7Z-xO-kxb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fnO-te-vwj" secondAttribute="trailing" constant="16" id="xbA-ot-aF1"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="TP9-fD-O5r"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="7WN-V2-FLf">
                         <barButtonItem key="rightBarButtonItem" title="About" id="Cpb-hv-aJp">
@@ -1740,6 +1735,55 @@
                         <outletCollection property="enButtenColection" destination="Oyf-b3-j1g" collectionClass="NSMutableArray" id="y9o-15-4rm"/>
                         <outletCollection property="enButtenColection" destination="gkv-BW-ivV" collectionClass="NSMutableArray" id="X2W-ZA-Av6"/>
                         <outletCollection property="enButtenColection" destination="KLx-Jm-pMb" collectionClass="NSMutableArray" id="yoF-wr-aCs"/>
+                        <outletCollection property="iconsCollection" destination="uR5-Hc-Aup" collectionClass="NSMutableArray" id="5Wp-L2-m88"/>
+                        <outletCollection property="iconsCollection" destination="FLl-gA-BFV" collectionClass="NSMutableArray" id="8Hg-iO-Snq"/>
+                        <outletCollection property="iconsCollection" destination="ycO-yL-QaY" collectionClass="NSMutableArray" id="erG-jd-fMP"/>
+                        <outletCollection property="iconsCollection" destination="ZBN-XO-yIV" collectionClass="NSMutableArray" id="0bp-az-l2b"/>
+                        <outletCollection property="iconsCollection" destination="LWD-Re-0bG" collectionClass="NSMutableArray" id="2wY-Xv-Lkh"/>
+                        <outletCollection property="iconsCollection" destination="Z2Q-OF-6LD" collectionClass="NSMutableArray" id="R3W-hb-UpS"/>
+                        <outletCollection property="iconsCollection" destination="ySh-oN-toZ" collectionClass="NSMutableArray" id="IUc-xe-Upu"/>
+                        <outletCollection property="numbersKeysCollection" destination="oZB-kG-IvR" collectionClass="NSMutableArray" id="ybl-69-WrT"/>
+                        <outletCollection property="numbersKeysCollection" destination="N26-QB-m5p" collectionClass="NSMutableArray" id="86f-We-EnH"/>
+                        <outletCollection property="numbersKeysCollection" destination="qRE-sj-gDE" collectionClass="NSMutableArray" id="CMi-VW-02y"/>
+                        <outletCollection property="numbersKeysCollection" destination="4SJ-OH-4I1" collectionClass="NSMutableArray" id="wyz-3U-EWF"/>
+                        <outletCollection property="numbersKeysCollection" destination="qLJ-bX-29g" collectionClass="NSMutableArray" id="sIo-Qj-7Ow"/>
+                        <outletCollection property="numbersKeysCollection" destination="d2z-wr-uYx" collectionClass="NSMutableArray" id="Ng2-Yw-6pD"/>
+                        <outletCollection property="numbersKeysCollection" destination="L3S-1f-rE1" collectionClass="NSMutableArray" id="Tp6-xJ-YPD"/>
+                        <outletCollection property="numbersKeysCollection" destination="L3S-1f-rE1" collectionClass="NSMutableArray" id="oYd-9j-jeF"/>
+                        <outletCollection property="numbersKeysCollection" destination="f33-WJ-Tjw" collectionClass="NSMutableArray" id="Gbv-Q4-gB6"/>
+                        <outletCollection property="numbersKeysCollection" destination="kCF-lC-Wu1" collectionClass="NSMutableArray" id="wB5-zt-zbc"/>
+                        <outletCollection property="numbersKeysCollection" destination="yff-cT-DG9" collectionClass="NSMutableArray" id="YRo-0q-m2i"/>
+                        <outletCollection property="numbersKeysCollection" destination="6A4-5d-obe" collectionClass="NSMutableArray" id="AKW-h2-bsJ"/>
+                        <outletCollection property="numbersKeysCollection" destination="cHq-QZ-X8f" collectionClass="NSMutableArray" id="xLJ-8Z-dFW"/>
+                        <outletCollection property="numbersKeysCollection" destination="INf-6C-XsU" collectionClass="NSMutableArray" id="qGY-nv-98D"/>
+                        <outletCollection property="numbersKeysCollection" destination="nzu-YV-3d9" collectionClass="NSMutableArray" id="hA7-ka-vZJ"/>
+                        <outletCollection property="numbersKeysCollection" destination="0fm-ob-0nT" collectionClass="NSMutableArray" id="EDc-mI-o1B"/>
+                        <outletCollection property="numbersKeysCollection" destination="J6N-bG-HLX" collectionClass="NSMutableArray" id="x3J-Wc-qX3"/>
+                        <outletCollection property="numbersKeysCollection" destination="wOT-IS-249" collectionClass="NSMutableArray" id="ax5-u2-a32"/>
+                        <outletCollection property="numbersKeysCollection" destination="uDm-N3-sDq" collectionClass="NSMutableArray" id="fjQ-sW-fEp"/>
+                        <outletCollection property="numbersKeysCollection" destination="5qL-yW-9hd" collectionClass="NSMutableArray" id="Nro-1J-r5T"/>
+                        <outletCollection property="numbersKeysCollection" destination="PlM-0O-5Jp" collectionClass="NSMutableArray" id="bxc-hw-N9m"/>
+                        <outletCollection property="numbersKeysCollection" destination="2BU-UQ-kPn" collectionClass="NSMutableArray" id="jNX-ih-CyE"/>
+                        <outletCollection property="numbersKeysCollection" destination="N0m-8x-qF3" collectionClass="NSMutableArray" id="fZV-Xh-iS8"/>
+                        <outletCollection property="numbersKeysCollection" destination="11t-vP-cxw" collectionClass="NSMutableArray" id="LBq-E4-gYY"/>
+                        <outletCollection property="numbersKeysCollection" destination="ehk-FU-Nc4" collectionClass="NSMutableArray" id="hRy-YP-OcW"/>
+                        <outletCollection property="numbersKeysCollection" destination="OjK-hP-pXc" collectionClass="NSMutableArray" id="BIl-KA-8NZ"/>
+                        <outletCollection property="numbersKeysCollection" destination="y0m-XX-6RM" collectionClass="NSMutableArray" id="e0R-KB-gyY"/>
+                        <outletCollection property="numbersKeysCollection" destination="tuN-UC-WvG" collectionClass="NSMutableArray" id="JPF-8Q-eyW"/>
+                        <outletCollection property="numbersKeysCollection" destination="2OH-aT-Hok" collectionClass="NSMutableArray" id="Flk-7X-q6B"/>
+                        <outletCollection property="numbersKeysCollection" destination="LiC-Hr-jTQ" collectionClass="NSMutableArray" id="zil-c8-N3v"/>
+                        <outletCollection property="numbersKeysCollection" destination="7lM-Oe-WMD" collectionClass="NSMutableArray" id="gqg-9g-4ug"/>
+                        <outletCollection property="numbersKeysCollection" destination="HKq-Kb-Hwd" collectionClass="NSMutableArray" id="N2A-za-0kK"/>
+                        <outletCollection property="numbersKeysCollection" destination="R7c-81-d7y" collectionClass="NSMutableArray" id="una-Iq-qLz"/>
+                        <outletCollection property="numbersKeysCollection" destination="5Vv-g4-o9D" collectionClass="NSMutableArray" id="e8h-ez-b9C"/>
+                        <outletCollection property="numbersKeysCollection" destination="Pa0-6s-5S7" collectionClass="NSMutableArray" id="7Lg-vb-2P1"/>
+                        <outletCollection property="numbersKeysCollection" destination="Erl-oB-nO9" collectionClass="NSMutableArray" id="Lme-o4-WwG"/>
+                        <outletCollection property="numbersKeysCollection" destination="7uu-q1-wKI" collectionClass="NSMutableArray" id="PCf-pP-gBs"/>
+                        <outletCollection property="numbersKeysCollection" destination="DY4-8J-Ijf" collectionClass="NSMutableArray" id="0bT-3w-GG4"/>
+                        <outletCollection property="numbersKeysCollection" destination="DY4-8J-Ijf" collectionClass="NSMutableArray" id="aSz-Qi-o3g"/>
+                        <outletCollection property="numbersKeysCollection" destination="zYn-rk-cec" collectionClass="NSMutableArray" id="rqw-ob-kVx"/>
+                        <outletCollection property="numbersKeysCollection" destination="Gj4-rT-Xrp" collectionClass="NSMutableArray" id="zXg-uE-ujx"/>
+                        <outletCollection property="numbersKeysCollection" destination="1Of-r2-tUD" collectionClass="NSMutableArray" id="4q7-LL-U2U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
